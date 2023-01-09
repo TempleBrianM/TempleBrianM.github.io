@@ -1,4 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto Mono');
+
 body {
     background-color: dimgrey;
     color: limegreen;
+    font-family: "Roboto Mono";
+}
+
+#title{
+    animation: fadeInAnimation ease 1s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}
+#subtitle{
+    animation: fadeInAnimation ease 1s;
+    animation-delay: 3.5s;
+    animation-fill-mode: backwards;
+}
+p:not(p.typewriter){
+    animation: fadeInAnimation ease 1s;
+    animation-delay: 5.5s;
+    animation-fill-mode: backwards;
+}
+
+#typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    animation:
+        typing 2s steps(50, end)
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100%  }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: limegreen; }
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+.topnav {
+    text-align: right;
+    text-decoration: dashed;
+}
+
+.topnav a:link {
+    padding-left: 2px;
+    text-decoration: none;
+    color:limegreen;
+    border-left: solid limegreen;
+    border-bottom: solid limegreen;
+}
+
+.topnav a:visited {
+    color:limegreen;
+    border-left: solid limegreen;
+    border-bottom: solid limegreen;
+}
+
+.topnav a:hover {
+    color: lightgreen;
+    border-left: solid lightgreen;
+    border-bottom: solid lightgreen;
+}
+
+.topnav a:active {
+    color: lightgreen;
+    border-left: solid lightgreen;
+    border-bottom: solid lightgreen;
 }
