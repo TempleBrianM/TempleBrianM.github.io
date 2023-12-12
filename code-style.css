@@ -1,58 +1,66 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto Mono');
 
-body {
+header {
+    position:fixed;
+    width:100%;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: dimgrey;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px 0px 10px;
+}
+
+footer {
+    width:100%;
+    background-color: dimgrey;
+}
+
+
+body {
+    margin: 0px;
+    width: 100%;
+    min-height: 100%;
+    background-color: grey;
     color: limegreen;
     font-family: "Roboto Mono";
+    font-size: 20px;
 }
 
-#title{
-    animation: fadeInAnimation ease 1s;
-    animation-delay: 2s;
-    animation-fill-mode: backwards;
+div {
+    display: block
 }
-#subtitle{
-    animation: fadeInAnimation ease 1s;
-    animation-delay: 3.5s;
-    animation-fill-mode: backwards;
-}
-p:not(p.typewriter){
-    animation: fadeInAnimation ease 1s;
-    animation-delay: 5.5s;
+
+.fader {
+    animation: fadeIn ease 0.5s;
+    animation-delay: 6.25s;
     animation-fill-mode: backwards;
 }
 
-#typewriter {
-    overflow: hidden;
-    white-space: nowrap;
-    animation:
-        typing 2s steps(50, end)
+section {
+    margin-right: max(20px,calc(50% - 450px));
+    margin-left: max(20px,calc(50% - 450px));
+    display:flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100vh;
+    height: 100vh;
+    padding: 0px;
 }
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100%  }
-}
-
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: limegreen; }
-}
-
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-     }
-}
 .topnav {
     text-align: right;
     text-decoration: dashed;
 }
 
-.topnav a:link {
+.topnav a:link, a:visited {
     padding-left: 2px;
     text-decoration: none;
     color:limegreen;
@@ -60,20 +68,36 @@ p:not(p.typewriter){
     border-bottom: solid limegreen;
 }
 
-.topnav a:visited {
-    color:limegreen;
-    border-left: solid limegreen;
-    border-bottom: solid limegreen;
-}
-
-.topnav a:hover {
+.topnav a:hover, a:active {
+    padding-left: 2px;
+    text-decoration: none;
     color: lightgreen;
     border-left: solid lightgreen;
     border-bottom: solid lightgreen;
 }
 
-.topnav a:active {
-    color: lightgreen;
-    border-left: solid lightgreen;
-    border-bottom: solid lightgreen;
+.typer {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid transparent;
+    animation: 
+        typing 1.5s steps(var(--numType), end),
+        blinking .75s step-end var(--numBlink);
+    animation-delay: var(--delay);
+    animation-fill-mode: backwards;
 }
+
+/**/@keyframes blinking {
+    0%, 100% { border-color: transparent }
+    50% { border-color: limegreen; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes typing {
+    0% { width: 0 }
+    100% { width: 100%  }
+}/**/
