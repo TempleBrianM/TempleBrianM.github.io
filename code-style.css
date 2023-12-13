@@ -1,61 +1,79 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto Mono');
 
-header {
-    position:fixed;
-    width:100%;
-    z-index: 999;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: dimgrey;
-
+:root {
+    --backgroundColor: #1a1a1d;
+    --footerColor: #151517;
+    --footerShadowColor: #101012;
+    --headerColor: #151517;
+    --headerShadowColor: #101012;
+    --textColor: #e1e1f2;
+    --textClickColor: #a6a6b3;
 }
-
-h1, h2, h3, h4, h5, h6 {
-    margin: 0px 0px 10px;
-}
-
-footer {
-    width:100%;
-    background-color: dimgrey;
-}
-
 
 body {
     margin: 0px;
-    width: 100%;
     min-height: 100%;
-    background-color: grey;
-    color: limegreen;
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
     font-family: "Roboto Mono";
-    font-size: 20px;
+    font-size: 14px;
 }
 
-div {
-    display: block
+footer {
+    box-shadow: 0px -5px 10px var(--footerShadowColor);
+    background-color: var(--footerColor);
+    width: 100%;
 }
 
-.fader {
-    animation: fadeIn ease 0.5s;
-    animation-delay: 6.25s;
-    animation-fill-mode: backwards;
+header {
+    box-shadow: 0px 5px 10px var(--headerShadowColor);
+    background-color: var(--headerColor);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 100%;
+    position:fixed;
+    z-index: 999;
+
+}
+
+h1 {
+    margin: 0px 0px 10px;
+    font-size: 60px;
 }
 
 section {
-    margin-right: max(20px,calc(50% - 450px));
-    margin-left: max(20px,calc(50% - 450px));
     display:flex;
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    flex-direction: column;
-    align-items: flex-start;
-    min-height: 100vh;
-    height: 100vh;
-    padding: 0px;
+    align-items: center;
+    min-height: calc(100% - 2.5em);
+    height: calc(100vh - 2.5em);
+}
+
+a {
+    margin-left:2ch;
+}
+
+.bio {
+    max-width: 60ch;
+}
+
+.credit {
+    margin: 0px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 5vw;
+}
+
+.fader {
+    display: flex;
+    animation: fadeIn ease 0.5s;
+    animation-delay: 3.5s;
+    animation-fill-mode: backwards;
 }
 
 .topnav {
+    align: right;
+    margin-right: 5vw;
     text-align: right;
     text-decoration: dashed;
 }
@@ -63,17 +81,17 @@ section {
 .topnav a:link, a:visited {
     padding-left: 2px;
     text-decoration: none;
-    color:limegreen;
-    border-left: solid limegreen;
-    border-bottom: solid limegreen;
+    color:var(--textColor);
+    border-left: solid var(--textColor);
+    border-bottom: solid var(--textColor);
 }
 
 .topnav a:hover, a:active {
     padding-left: 2px;
     text-decoration: none;
-    color: lightgreen;
-    border-left: solid lightgreen;
-    border-bottom: solid lightgreen;
+    color: var(--textClickColor);
+    border-left: solid var(--textClickColor);
+    border-bottom: solid var(--textClickColor);
 }
 
 .typer {
@@ -81,15 +99,21 @@ section {
     white-space: nowrap;
     border-right: .15em solid transparent;
     animation: 
-        typing 1.5s steps(var(--numType), end),
+        typing 0.5s steps(var(--numType), end),
         blinking .75s step-end var(--numBlink);
     animation-delay: var(--delay);
     animation-fill-mode: backwards;
 }
 
+.typer-bounds {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 /**/@keyframes blinking {
     0%, 100% { border-color: transparent }
-    50% { border-color: limegreen; }
+    50% { border-color: var(--textColor); }
 }
 
 @keyframes fadeIn {
