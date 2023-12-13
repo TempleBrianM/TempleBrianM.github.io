@@ -1,33 +1,44 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto Mono');
 
 :root {
-    --backgroundColor: #1a1a1d;
-    --footerColor: #151517;
-    --footerShadowColor: #101012;
-    --headerColor: #151517;
-    --headerShadowColor: #101012;
-    --textColor: #e1e1f2;
-    --textClickColor: #a6a6b3;
+    --clr-bg: #1a1a1d;
+    --clr-ft: #151517;
+    --clr-ft-shdw: #101012;
+    --clr-hd: #151517;
+    --clr-hd-shdw: #101012;
+    --clr-txt: #e1e1f2;
+    --clr-txt-click: #a6a6b3;
+    --clr-accnt: #37aff7;
+    --clr-accnt-click: #226b99;
+}
+
+a {
+    margin-left:2ch;
 }
 
 body {
     margin: 0px;
     min-height: 100%;
-    background-color: var(--backgroundColor);
-    color: var(--textColor);
+    background-color: var(--clr-bg);
+    color: var(--clr-txt);
     font-family: "Roboto Mono";
     font-size: 14px;
 }
 
 footer {
-    box-shadow: 0px -5px 10px var(--footerShadowColor);
-    background-color: var(--footerColor);
+    box-shadow: 0px -5px 10px var(--clr-ft-shdw);
+    background-color: var(--clr-ft);
     width: 100%;
 }
 
+h1 {
+    margin: 0px 0px 10px;
+    font-size: 60px;
+}
+
 header {
-    box-shadow: 0px 5px 10px var(--headerShadowColor);
-    background-color: var(--headerColor);
+    box-shadow: 0px 5px 10px var(--clr-hd-shdw);
+    background-color: var(--clr-hd);
     padding-top: 1em;
     padding-bottom: 1em;
     width: 100%;
@@ -36,25 +47,15 @@ header {
 
 }
 
-h1 {
-    margin: 0px 0px 10px;
-    font-size: 60px;
+html {
+    scroll-behavior: smooth;
 }
 
 section {
     display:flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100% - 2.5em);
-    height: calc(100vh - 2.5em);
-}
-
-a {
-    margin-left:2ch;
-}
-
-.bio {
-    max-width: 60ch;
+    height: calc(100vh);
 }
 
 .credit {
@@ -71,27 +72,33 @@ a {
     animation-fill-mode: backwards;
 }
 
-.topnav {
+.intro {
+    max-width: 60ch;
+}
+
+.top-nav {
     align: right;
     margin-right: 5vw;
     text-align: right;
     text-decoration: dashed;
 }
 
-.topnav a:link, a:visited {
-    padding-left: 2px;
+.top-nav a:link, a:visited {
+    padding-left: 1ch;
+    padding-bottom: 0.25em;
     text-decoration: none;
-    color:var(--textColor);
-    border-left: solid var(--textColor);
-    border-bottom: solid var(--textColor);
+    color:var(--clr-txt);
+    border-left: solid var(--clr-accnt);
+    border-bottom: solid var(--clr-accnt);
 }
 
-.topnav a:hover, a:active {
-    padding-left: 2px;
+.top-nav a:hover, a:active {
+    padding-left: 1ch;
+    padding-bottom: 0.25em;
     text-decoration: none;
-    color: var(--textClickColor);
-    border-left: solid var(--textClickColor);
-    border-bottom: solid var(--textClickColor);
+    color: var(--clr-txt-click);
+    border-left: solid var(--clr-accnt-click);
+    border-bottom: solid var(--clr-accnt-click);
 }
 
 .typer {
@@ -111,9 +118,15 @@ a {
     align-items: flex-start;
 }
 
+#profile-picture {
+    border-radius: 5% 30%;
+    border: 3px solid var(--clr-accnt);
+    margin-right: 3em;
+}
+
 /**/@keyframes blinking {
-    0%, 100% { border-color: transparent }
-    50% { border-color: var(--textColor); }
+    0%, 100% { border-color: transparent; }
+    50% { border-color: var(--clr-accnt); }
 }
 
 @keyframes fadeIn {
