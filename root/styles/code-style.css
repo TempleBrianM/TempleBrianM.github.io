@@ -14,6 +14,23 @@
     --clr-accnt-click: #226b99;
 }
 
+/*WIP Custom Scrollbar
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background #111111;
+}*/
+
 body {
     background-color: var(--clr-bg);
     color: var(--clr-txt);
@@ -129,7 +146,7 @@ section:first-of-type {
 }
 
 #profile-picture {
-    border: 3px solid var(--clr-accnt);
+    border: 0.2em solid var(--clr-accnt);
     border-radius: 5% 30%;
     height: 200px;
     margin-right: 3em;
