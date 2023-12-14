@@ -35,7 +35,7 @@ body {
     background-color: var(--clr-bg);
     color: var(--clr-txt);
     font-family: "Roboto Mono";
-    font-size: 14px;
+    font-size: 16px;
     margin: 0px;
     min-height: 100%;
 }
@@ -48,6 +48,7 @@ footer {
     justify-content: space-between;
     padding: 0.5em 5%;
     width: calc(100% - 10%);
+    z-index: 999;
 }
 
 h1 {
@@ -61,7 +62,7 @@ header {
     box-shadow: 0px 5px 10px var(--clr-hd-shdw);
     display:flex;
     justify-content: space-between;
-    padding: 1em 5%;
+    padding: 0.5em 5%;
     position:fixed;
     width: calc(100% - 10%);
     z-index: 999;
@@ -74,12 +75,8 @@ html {
 section {
     align-items: center;
     display:flex;
-    height: calc(100vh - 5.80142em);
+    height: 100vh;
     justify-content: center;
-}
-
-section:first-of-type {
-    padding-top: 3.47142em;
 }
 
 .credit {
@@ -104,13 +101,13 @@ section:first-of-type {
 
 .top-nav a:link {
     margin-left: 2ch;
-    padding: 0.23571em 1ch;
+    padding: 0.5em 1ch;
     text-decoration: none;
 }
 
 .top-nav a:link, a:visited {
     background-color: var(--clr-link);
-    border-radius: 0.50em;
+    border-radius: 1em;
     color:var(--clr-txt);
 }
 
@@ -140,13 +137,26 @@ section:first-of-type {
 }
 
 #icon {
+    border-radius: 100%;
     height: 25px;
+    margin-right: 2ch;
     object-fit: cover;
+    transition: 0.2s;
     width: 25px;
 }
 
+#icon-bounds{
+    align-items: center;
+    display:flex;
+    justify-content: space-between;
+}
+
+#icon-text{
+    margin: 0px;
+}
+
 #profile-picture {
-    border: 0.2em solid var(--clr-accnt);
+    border: 3px solid var(--clr-accnt);
     border-radius: 5% 30%;
     height: 200px;
     margin-right: 3em;
