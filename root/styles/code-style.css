@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto Mono');
 
+/*TODO Reorder Classes & Elements*/
+/*TODO Select professional font*/
+/*TODO Create variables for most/all hardcoded values*/
+/*TODO Variable Overhaul*/
 :root {
     --clr-bg: #1a1a1d;
+    --clr-bg-brdr: #161619;
     --clr-ft: #151517;
     --clr-ft-shdw: #101012;
     --clr-hd: #151517;
@@ -12,9 +17,11 @@
     --clr-txt: #e1e1f2;
     --clr-accnt: #37aff7;
     --clr-accnt-click: #226b99;
+    --bd-border: 5vw;
+    --hdft-padding: 5%;
 }
 
-/*WIP Custom Scrollbar
+/*TODO Custom Scrollbar
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -36,19 +43,16 @@ body {
     color: var(--clr-txt);
     font-family: "Roboto Mono";
     font-size: 16px;
+    border-left: var(--bd-border) solid var(--clr-bg-brdr);
+    border-right: var(--bd-border) solid var(--clr-bg-brdr);
     margin: 0px;
     min-height: 100%;
 }
 
+/*TODO FIX Footer does not extend width of page when horizontal scroll bar is present*/
 footer {
-    align-items: center;
-    background-color: var(--clr-ft);
     box-shadow: 0px -5px 10px var(--clr-ft-shdw);
-    display:flex;
-    justify-content: space-between;
-    padding: 0.5em 5%;
-    width: calc(100% - 10%);
-    z-index: 999;
+    width: 100%;
 }
 
 h1 {
@@ -57,21 +61,16 @@ h1 {
 }
 
 header {
-    align-items: center;
-    background-color: var(--clr-hd);
     box-shadow: 0px 5px 10px var(--clr-hd-shdw);
-    display:flex;
-    justify-content: space-between;
-    padding: 0.5em 5%;
-    position:fixed;
-    width: calc(100% - 10%);
-    z-index: 999;
+    position: fixed;
+    width: calc(100% - 2 * var(--bd-border));
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+/*TODO create visual border for sections (have a default border and create individuals on demand as necessary)*/
 section {
     align-items: center;
     display:flex;
@@ -88,6 +87,16 @@ section {
     animation-delay: var(--delay);
     animation-fill-mode: backwards;
     display: flex;
+}
+
+.headfoot {
+    align-items: center;
+    background-color: var(--clr-hd);
+    box-sizing: border-box;
+    display:flex;
+    justify-content: space-between;
+    padding: 0.5em var(--hdft-padding);
+    z-index: 999;
 }
 
 .intro {
