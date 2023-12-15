@@ -6,7 +6,6 @@
 /*TODO Variable Overhaul*/
 :root {
     --clr-bg: #1a1a1d;
-    --clr-bg-brdr: #161619;
     --clr-ft: #151517;
     --clr-ft-shdw: #101012;
     --clr-hd: #151517;
@@ -17,8 +16,7 @@
     --clr-txt: #e1e1f2;
     --clr-accnt: #37aff7;
     --clr-accnt-click: #226b99;
-    --bd-border: 5vw;
-    --hdft-padding: 5%;
+    --mn-mx-width: 1100px;
 }
 
 /*TODO Custom Scrollbar
@@ -41,17 +39,20 @@
 body {
     background-color: var(--clr-bg);
     color: var(--clr-txt);
+    display: flex;
     font-family: "Roboto Mono";
     font-size: 16px;
-    border-left: var(--bd-border) solid var(--clr-bg-brdr);
-    border-right: var(--bd-border) solid var(--clr-bg-brdr);
+    flex-direction: column;
     margin: 0px;
-    min-height: 100%;
+    width: 100%;
+    min-height: 100vh;
 }
 
 /*TODO FIX Footer does not extend width of page when horizontal scroll bar is present*/
 footer {
+    background-color: var(--clr-ft);
     box-shadow: 0px -5px 10px var(--clr-ft-shdw);
+    margin-top: auto;
     width: 100%;
 }
 
@@ -61,20 +62,32 @@ h1 {
 }
 
 header {
+    background-color: var(--clr-hd);
     box-shadow: 0px 5px 10px var(--clr-hd-shdw);
-    position: fixed;
-    width: calc(100% - 2 * var(--bd-border));
+    margin: 0px;
+    padding: 0.5em 0px;
+    position: sticky;
+    top: 0;
+    width: 100%;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px auto;
+    max-width: var(--mn-mx-width);
+    width: 100%;
+}
+
 /*TODO create visual border for sections (have a default border and create individuals on demand as necessary)*/
 section {
     align-items: center;
-    display:flex;
-    height: 100vh;
+    display: flex;
     justify-content: center;
 }
 
@@ -91,11 +104,11 @@ section {
 
 .headfoot {
     align-items: center;
-    background-color: var(--clr-hd);
-    box-sizing: border-box;
     display:flex;
     justify-content: space-between;
-    padding: 0.5em var(--hdft-padding);
+    margin: auto;
+    max-width: var(--mn-mx-width);
+    width: 100%;
     z-index: 999;
 }
 
