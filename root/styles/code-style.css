@@ -48,7 +48,6 @@ body {
     min-height: 100vh;
 }
 
-/*TODO FIX Footer does not extend width of page when horizontal scroll bar is present*/
 footer {
     background-color: var(--clr-ft);
     box-shadow: 0px -5px 10px var(--clr-ft-shdw);
