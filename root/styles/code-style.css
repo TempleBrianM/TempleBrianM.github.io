@@ -3,7 +3,8 @@
 /*TODO Reorder Classes & Elements*/
 /*TODO Select professional font*/
 /*TODO Create variables for most/all hardcoded values*/
-/*TODO Variable Overhaul*/
+/*TODO Light and Dark Mode*/
+/*TODO Variable Name Overhaul*/
 :root {
     --clr-bg: #1a1a1d;
     --clr-ft: #151517;
@@ -83,6 +84,9 @@ main {
     width: 100%;
 }
 
+/*TODO Projects Section*/
+/*TODO About Section*/
+/*TODO Contact Section*/
 /*TODO create visual border for sections (have a default border and create individuals on demand as necessary)*/
 section {
     align-items: center;
