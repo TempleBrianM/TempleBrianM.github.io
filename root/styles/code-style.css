@@ -11,10 +11,10 @@
     --clr-ft-shdw: #101012;
     --clr-hd: #151517;
     --clr-hd-shdw: #101012;
-    --clr-link: #323238;
-    --clr-link-hover: #45454d;
-    --clr-link-click: #676773;
+    --clr-link: ;
     --clr-txt: #e1e1f2;
+    --clr-txt-click: #676773;
+    --clr-txt-hover: #a0a0b1;
     --clr-accnt: #37aff7;
     --clr-accnt-click: #226b99;
     --mn-mx-width: 1100px;
@@ -126,22 +126,19 @@ section {
 
 .top-nav a:link {
     margin-left: 2ch;
-    padding: 0.5em 1ch;
     text-decoration: none;
 }
 
 .top-nav a:link, a:visited {
-    background-color: var(--clr-link);
-    border-radius: 1em;
     color:var(--clr-txt);
 }
 
 .top-nav a:hover {
-    background-color: var(--clr-link-hover);
+    color: var(--clr-txt-hover);
 }
 
 .top-nav a:active {
-    background-color: var(--clr-link-click);
+    color: var(--clr-txt-click);
 }
 
 .typer {
