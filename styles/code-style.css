@@ -119,11 +119,11 @@ section:first-child {
     max-width: 60ch;
 }
 
-/*TODO Make cursor my visually pleasing*/
+/*TODO Make cursor my visually pleasing*//*
 .cursor-left {
-    border-bottom: 5px solid transparent;
-    border-left: 9px solid white;
-    border-top: 10px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid white;
+    border-top: 7px solid transparent;
     height: 0;
     position: fixed;
     width: 0;
@@ -132,13 +132,32 @@ section:first-child {
 
 .cursor-right {
     height: 0;
-    border-left: 11px solid white;
-    border-top: 12px solid transparent;
+    border-left: 10px solid white;
+    border-top: 10px solid transparent;
     position: fixed;
     width: 0;
     z-index: 999;
 }
 
+
+.cursor-background-left {
+    border-bottom: 9px solid transparent;
+    border-left: 9px solid var(--clr-accnt);
+    border-top: 9px solid transparent;
+    height: 0;
+    position: fixed;
+    width: 0;
+    z-index: 998;
+}
+
+.cursor-background-right {
+    height: 0;
+    border-left: 13px solid var(--clr-accnt);
+    border-top: 13px solid transparent;
+    position: fixed;
+    width: 0;
+    z-index: 998;
+}*/
 
 /*TODO Make navigation links easier to select*/
 .top-nav {
@@ -184,7 +203,7 @@ section:first-child {
     margin: auto;
     max-width: var(--mn-mx-width);
     width: 100%;
-    z-index: 998;
+    z-index: 997;
 }
 
 #index {
@@ -198,7 +217,7 @@ section:first-child {
     margin: auto;
     max-width: var(--mn-mx-width);
     width: 100%;
-    z-index: 998;
+    z-index: 997;
 }
 
 /*TODO Click on logo bring to home page*/
