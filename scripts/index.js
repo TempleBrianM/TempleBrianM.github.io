@@ -5,13 +5,13 @@ const header = document.getElementById('header');
 
 index.style.minHeight = 'calc(100vh - ' + header.offsetHeight + 'px)';
 
+// Cursor
+/*
 const cursorLeft = document.querySelector('.cursor-left');
 const cursorRight = document.querySelector('.cursor-right');
 const cursorBackgroundLeft = document.querySelector('.cursor-background-left');
 const cursorBackgroundRight = document.querySelector('.cursor-background-right');
 
-// Cursor
-/*
 const positionElement = (e)=> {
   const mouseY = e.clientY;
   const mouseX = e.clientX;
@@ -22,4 +22,4 @@ const positionElement = (e)=> {
   cursorBackgroundRight.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
 }
 
-window.addEventListener('mousemove', positionElement)*/
+window.addEventListener('mouse-move', positionElement)*/

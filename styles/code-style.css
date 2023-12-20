@@ -31,23 +31,6 @@
     }
 }*/
 
-/*TODO Custom Scrollbar
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #888;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background #111111;
-}*/
-
 body {
     background-color: var(--clr-bg);
     color: var(--clr-txt);
@@ -195,10 +178,10 @@ section:first-child {
     color: var(--clr-accnt-click);
 }
 
-.typer {
+.typing {
     animation:
         type 1s steps(var(--char), end),
-        blinking 1s step-end var(--numblink);
+        blinking 1s step-end var(--num-blink);
     animation-delay: var(--delay);
     animation-fill-mode: backwards;
     border-right: .15em solid transparent;
@@ -206,7 +189,7 @@ section:first-child {
     white-space: nowrap;
 }
 
-.typer-bounds {
+.typing-bounds {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
