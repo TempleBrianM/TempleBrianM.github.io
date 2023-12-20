@@ -1,6 +1,7 @@
-// TODO better organize javascript functions
-// Header offset
-const index = document.getElementById('index');
-const header = document.getElementById('header');
+// Uses the header's height to set a the index section's minimum height.
+function setMinHeightIndex() {
+    const INDEX = document.getElementById('index');
+    const HEADER = document.getElementById('header');
 
-index.style.minHeight = 'calc(100vh - ' + header.offsetHeight + 'px)';
+    INDEX.style.minHeight = 'calc(100vh - ' + HEADER.offsetHeight + 'px)';
+}
