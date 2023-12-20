@@ -16,20 +16,22 @@
     --clr-accnt: hsl(203, 92%, 59%);
     --clr-accnt-click: hsl(203, 64%, 37%);
     --mn-mx-width: 1100px;
+    --second-per-char: 10ms;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
     :root {
         color-scheme: dark;
-        --clr-bg: hsl(240, 6%, 10%);
-        --clr-hd:  hsla(240, 6%, 8%, 0.8);
-        --clr-hd-shdw: hsl(240, 6%, 4%);
-        --clr-txt: hsl(240, 6%, 89%);
-        --clr-txt-click: hsl(240, 6%, 60%);
-        --clr-txt-drk: hsl(240, 6%, 75%);
-        --clr-accnt: hsl(203, 92%, 59%);
-        --clr-accnt-click: hsl(203, 64%, 37%);
+        --clr-bg:           hsl(240, 6%, 10%);
+        --clr-hd:           hsla(240, 6%, 8%, 0.8);
+        --clr-hd-shdw:      hsl(240, 6%, 4%);
+        --clr-txt:          hsl(240, 6%, 89%);
+        --clr-txt-click:    hsl(240, 6%, 60%);
+        --clr-txt-drk:      hsl(240, 6%, 75%);
+        --clr-accnt:        hsl(203, 92%, 59%);
+        --clr-accnt-click:  hsl(203, 64%, 37%);
         --mn-mx-width: 1100px;
+        --second-per-char: 10ms;
     }
 }
 
@@ -37,7 +39,7 @@ body {
     background-color: var(--clr-bg);
     color: var(--clr-txt);
     display: flex;
-    font-family: "Roboto Mono";
+    font-family:monospace;
     font-size: 16px;
     flex-direction: column;
     margin: 0px;
@@ -76,7 +78,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: auto;
+    margin: 0 auto;
     max-width: var(--mn-mx-width);
     width: 100%;
 }
@@ -88,12 +90,7 @@ main {
 section {
     display: flex;
     justify-content: center;
-    margin-top: 5em;
-    /*min-height: 100vh;*/
-}
-
-section:first-child {
-    margin-top: 0em;
+    margin-top: 10em;
 }
 
 .credit {
@@ -104,6 +101,14 @@ section:first-child {
     justify-content: center;
     margin: 0px;
     text-align: center;
+}
+
+.design {
+    height: 20em;
+    width: 100%;
+    background-color: var(--clr-bg);
+    border-radius: 2em;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, var(--clr-bg) 50px ), repeating-linear-gradient( var(--clr-accnt), var(--clr-accnt) );
 }
 
 .fader {
@@ -141,13 +146,14 @@ section:first-child {
 
 .typing {
     animation:
-        type 1s steps(var(--char), end),
-        blinking 1s step-end var(--num-blink);
-    animation-delay: var(--delay);
+        type calc(var(--char) * var(--second-per-char)) steps(var(--char), end),
+        blinking 1s step-end calc(var(--char) * var(--second-per-char)) var(--num-blink);
+    animation-delay: calc(var(--delay-char) * var(--second-per-char));
     animation-fill-mode: backwards;
     border-right: .15em solid transparent;
     overflow: hidden;
     white-space: nowrap;
+    margin: 0;
 }
 
 .typing-bounds {
@@ -165,6 +171,9 @@ section:first-child {
 
 #index {
     align-items: center;
+    box-shadow: 0px 0px 4px 4px var(--clr-hd-shdw);
+    display: flex;
+    justify-content: center;
 }
 
 #header-content {
@@ -220,6 +229,7 @@ text-decoration: none;
 }
 
 @keyframes type {
-    0% { width: 0 }
-    100% { width: 100%  }
+    0% { width: 0; border-color: transparent;}
+    1% { border-color: var(--clr-accnt);}
+    100% { width: 100%; border-color: var(--clr-accnt);}
 }/**/
