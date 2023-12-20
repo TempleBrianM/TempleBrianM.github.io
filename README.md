@@ -1,3 +1,7 @@
-# portfolio-website
+# My Software Developer Portfolio
 
-Website whose purpose is to display coding projects.
+##Intro
+This portfolio website is where my most recent projects are displayed for to be seen by whoever may be interested.
+
+##URL
+https://templebrianm.github.io/
