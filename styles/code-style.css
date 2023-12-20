@@ -3,7 +3,6 @@
 /*TODO Reorder Classes & Elements*/
 /*TODO Select professional font*/
 /*TODO Create variables for most/all hardcoded values*/
-/*TODO Light and Dark Mode*/
 /*TODO Variable Name Overhaul*/
 :root {
     --clr-bg: hsl(240, 6%, 10%);
@@ -16,6 +15,21 @@
     --clr-accnt-click: hsl(203, 64%, 37%);
     --mn-mx-width: 1100px;
 }
+
+/*TODO Light and Dark Mode*//*
+@media (prefers-color-scheme: dark) {
+    :root {
+        --clr-bg: hsl(240, 6%, 100%);
+        --clr-hd:  hsla(240, 6%, 80%, 0.8);
+        --clr-hd-shdw: hsl(240, 60%, 4%);
+        --clr-txt: hsl(240, 6%, 89%);
+        --clr-txt-click: hsl(240, 60%, 60%);
+        --clr-txt-drk: hsl(240, 6%, 75%);
+        --clr-accnt: hsl(203, 92%, 59%);
+        --clr-accnt-click: hsl(203, 64%, 37%);
+        --mn-mx-width: 1100px;
+    }
+}*/
 
 /*TODO Custom Scrollbar
 ::-webkit-scrollbar {
@@ -37,7 +51,6 @@
 body {
     background-color: var(--clr-bg);
     color: var(--clr-txt);
-    cursor: none;
     display: flex;
     font-family: "Roboto Mono";
     font-size: 16px;
@@ -119,7 +132,7 @@ section:first-child {
     max-width: 60ch;
 }
 
-/*TODO Make cursor my visually pleasing*//*
+/*TODO Make custom cursor*//*
 .cursor-left {
     border-bottom: 7px solid transparent;
     border-left: 7px solid white;
