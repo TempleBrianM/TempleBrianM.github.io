@@ -1,7 +1,7 @@
 # My Software Developer Portfolio Website
 
-##Intro
+## Intro
 This portfolio website is where my most recent projects are displayed for to be seen by whoever may be interested.
 
-##URL
+## URL
 https://templebrianm.github.io/
