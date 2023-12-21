@@ -7,38 +7,35 @@
     <link rel="stylesheet" href="styles/crt-display.css">
 </head>
 <body>
-<header id="header">
-    <div id="header-content">
-        <a id="logo-link" href="">
-            <img id="logo"
-                 src="images/Brian-Temple-Headshot.jpg">
-            <h2>Brian Temple</h2>
+<header>
+    <a class="logo-link" href="">
+        <img class="logo-image"
+             src="images/brian-temple-headshot.jpg"
+             alt="My Logo">
+        <h2 class="logo-name">Brian Temple</h2>
+    </a>
+    <nav class="top-nav">
+        <a href="#index" class="top-nav-link">
+            <h3 class="top-nav-text">&lt; index<sup>00</sup> &gt;</h3>
         </a>
-        <nav class="top-nav">
-            <h3>
-                <a href="#index" class="top-nav-link">
-                    &lt; index<sup>00</sup> &gt;
-                </a>
-                <a href="#projects" class="top-nav-link">
-                    &lt; projects<sup>01</sup> &gt;
-                </a>
-                <a href="#about" class="top-nav-link">
-                    &lt; about<sup>10</sup> &gt;
-                </a>
-                <a href="#contact" class="top-nav-link">
-                    &lt; contact<sup>11</sup> &gt;
-                </a>
-            </h3>
-        </nav>
-    </div>
+        <a href="#projects" class="top-nav-link">
+            <h3 class="top-nav-text">&lt; projects<sup>01</sup> &gt;</h3>
+        </a>
+        <a href="#about" class="top-nav-link">
+            <h3 class="top-nav-text">&lt; about<sup>10</sup> &gt;</h3>
+        </a>
+        <a href="#contact" class="top-nav-link">
+            <h3 class="top-nav-text">&lt; contact<sup>11</sup> &gt;</h3>
+        </a>
+    </nav>
 </header>
 <main>
     <section id="index">
         <div class="crt-effect crt-content">
                 <div class="fader"
-                 style="--duration: 0.3s; --delay: 0.3s;">
-                    <img id="profile-picture"
-                         src="images/Brian-Temple-Headshot.jpg"
+                     style="--duration: 0.3s; --delay: 0.3s;">
+                    <img class="profile-picture"
+                         src="images/brian-temple-headshot.jpg"
                          alt="My Profile Image">
                 </div>
                 <div class="typing-bounds">
@@ -91,7 +88,9 @@
                     </div>
                 </div>
         </div>
-        <img class="crt-overlay" src="images/crt-monitor.png" />
+        <img class="crt-monitor-overlay"
+             src="images/crt-monitor-overlay.png"
+             alt="CRT Monitor Overlay"/>
     </section>
     <section id="about">
         <h1>// TODO about</h1>
@@ -109,9 +108,7 @@
     </section>
 </main>
 <footer>
-    <div id="footer-content">
-        <h4 class="credit">Designed by Brian Temple</h4>
-    </div>
+    <h4 class="credits">Designed by Brian Temple</h4>
 </footer>
 </body>
 </html>

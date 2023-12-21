@@ -60,36 +60,25 @@ body {
     width: 100%;
 }
 
-footer {
-    background-color: var(--clr-ft);
-    margin-top: auto;
-    width: 100%;
-}
-
-footer #footer-content {
-    margin: auto;
-    max-width: var(--mn-mx-width);
-    width: 100%;
-}
-
 header {
     backdrop-filter: blur(0.2em);
     background-color: var(--clr-hd);
     box-shadow: 0px 5px 10px var(--clr-hd-shdw);
-    margin: 0px;
-    padding: 0.5em 0px;
+    display:flex;
+    justify-content: space-between;
+    padding: 0 calc((100% - var(--mn-mx-width)) / 2);
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 997;
+    max-width: var(--mn-mx-width);
 }
 
-header #header-content {
-    align-items: center;
-    display:flex;
-    justify-content: space-between;
-    margin: auto;
+footer {
+    background-color: var(--clr-ft);
+    margin-top: auto;
     max-width: var(--mn-mx-width);
+    padding: 0 calc((100% - var(--mn-mx-width)) / 2);
     width: 100%;
 }
 
@@ -119,8 +108,7 @@ p {
   text-indent: 4ch;
 }
 
-.credit {
-    color: var(--clr-txt-drk);
+h4.credits {
     text-align: center;
 }
 
@@ -135,7 +123,7 @@ p {
     width: 100%;
 }
 
-.crt-overlay {
+.crt-monitor-overlay {
     box-shadow: 0px 0px 5px 5px var(--clr-hd-shdw);
     height: auto;
     z-index: 2;
@@ -165,19 +153,19 @@ p {
     margin-right: 0;
 }
 
-.top-nav a:link, #logo-link {
+.top-nav a:link, .logo-link {
     text-decoration: none;
 }
 
-.top-nav a:link, .top-nav a:visited, a:link#logo-link, a:visited#logo-link {
+.top-nav a:link, .top-nav a:visited, a:link.logo-link, a:visited.logo-link {
     color:var(--clr-txt);
 }
 
-.top-nav a:hover, a:hover#logo-link {
+.top-nav a:hover, a:hover.logo-link {
     color: var(--clr-accnt);
 }
 
-.top-nav a:active, a:active#logo-link {
+.top-nav a:active, a:active.logo-link {
     color: var(--clr-accnt-click);
 }
 
@@ -199,7 +187,7 @@ p {
     flex-direction: column;
 }
 
-#logo {
+.logo-image {
     border-radius: 100%;
     height: 25px;
     margin-right: 2ch;
@@ -208,12 +196,12 @@ p {
     width: 25px;
 }
 
-#logo-link {
+a.logo-link {
     align-items: center;
     display:flex;
 }
 
-#profile-picture {
+.profile-picture {
     border: 3px solid var(--clr-accnt);
     border-radius: 5% 30%;
     height: 200px;
