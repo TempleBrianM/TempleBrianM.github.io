@@ -104,12 +104,17 @@ section#index {
     position: relative;
 }
 
+/*TODO text-indent: 4ch; should not be applied to crt typer*/
 p {
   text-indent: 4ch;
 }
 
 h4.credits {
     text-align: center;
+}
+
+pre {
+    margin: 0;
 }
 
 .crt-content {
@@ -168,7 +173,7 @@ h4.credits {
 .top-nav a:active, a:active.logo-link {
     color: var(--clr-accnt-click);
 }
-
+/*TODO Typer sound effect (and monitor turn on?)*/
 .typing {
     animation:
         type calc(var(--char) * var(--second-per-char)) steps(var(--char), end) backwards,
@@ -225,6 +230,6 @@ a.logo-link {
 }
 
 @keyframes type {
-    0% { width: 0; }
-    100% { width: 100%; }
+    0% { max-width: 0; }
+    100% { max-width: 100%; }
 }
