@@ -182,7 +182,7 @@ pre {
     animation-delay: calc(var(--delay-char) * var(--second-per-char));
     border-right: .15em solid transparent;
     overflow: hidden;
-    white-space: nowrap;
+    white-space: pre;
     margin: 0;
 }
 
@@ -220,13 +220,13 @@ a.logo-link {
     50% { border-color: var(--clr-accnt); }
 }
 
+@keyframes cursor {
+    100% { border-color: var(--clr-accnt);}
+}
+
 @keyframes fade {
     0% { opacity: 0; }
     100% { opacity: 1; }
-}
-
-@keyframes cursor {
-    100% { border-color: var(--clr-accnt);}
 }
 
 @keyframes type {
