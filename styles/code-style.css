@@ -7,19 +7,20 @@
 /*TODO Recolor*/
 :root {
     color-scheme: light;
-    --clr-bg:               hsl(240, 6%, 100%);
+    --clr-bg:               hsl(240, 6%, 90%);
+    --clr-crt-bg:           hsl(240, 6%, 25%);
     --clr-hd:               hsla(240, 6%, 92%, 0.8);
     --clr-hd-shdw:          hsl(240, 6%, 88%);
     --clr-txt:              hsl(240, 6%, 11%);
     --clr-txt-click:        hsl(240, 6%, 40%);
     --clr-txt-drk:          hsl(240, 6%, 25%);
-    --clr-accnt:            hsl(203, 92%, 59%);
-    --clr-accnt-click:      hsl(203, 64%, 37%);
+    --clr-accnt:            hsl(203, 92%, 50%);
+    --clr-accnt-click:      hsl(203, 64%, 63%);
     --mn-mx-width:          1100px;
     --second-per-char:      10ms;
     --crt-hr:               180deg;
     --crt-s:                0;
-    --crt-b:                1;
+    --crt-b:                0.75;
     --crt-gs:               50%;
 }
 
@@ -27,12 +28,13 @@
     :root {
         color-scheme: dark;
         --clr-bg:               hsl(240, 6%, 10%);
+        --clr-crt-bg:           hsl(240, 6%, 15%);
         --clr-hd:               hsla(240, 6%, 8%, 0.8);
         --clr-hd-shdw:          hsl(240, 6%, 4%);
         --clr-txt:              hsl(240, 6%, 89%);
         --clr-txt-click:        hsl(240, 6%, 60%);
         --clr-txt-drk:          hsl(240, 6%, 75%);
-        --clr-accnt:            hsl(203, 92%, 59%);
+        --clr-accnt:            hsl(203, 92%, 50%);
         --clr-accnt-click:      hsl(203, 64%, 37%);
         --mn-mx-width:          1100px;
         --second-per-char:      10ms;
@@ -110,6 +112,8 @@ section:first-child {
 }
 
 .crt-content {
+    color: var(--clr-accnt);
+    background-color: var(--clr-crt-bg);
     align-items: center;
     display: flex;
     height: 100%;
