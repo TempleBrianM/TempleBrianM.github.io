@@ -104,7 +104,7 @@ section#index {
     position: relative;
 }
 
-/*TODO text-indent: 4ch; should not be applied to crt typer*/
+/*TODO text-indent: 4ch; should not be applied to crt typing*/
 p {
   text-indent: 4ch;
 }
@@ -173,7 +173,7 @@ pre {
 .top-nav a:active, a:active.logo-link {
     color: var(--clr-accnt-click);
 }
-/*TODO Typer sound effect (and monitor turn on?)*/
+/*TODO typing sound effect (and monitor turn on?)*/
 .typing {
     animation:
         type calc(var(--char) * var(--second-per-char)) steps(var(--char), end) backwards,
