@@ -92,13 +92,12 @@ main {
 /*TODO Contact Section*/
 /*TODO create visual border for sections (have a default border and create individuals on demand as necessary)*/
 section {
-    display: flex;
-    justify-content: center;
-    margin: 10em auto 0;
+    margin: 3em auto 0;
 }
 
-section:first-child {
-    margin-top: 3em;
+section#index {
+    display: flex;
+    position: relative;
 }
 
 .credit {
@@ -151,8 +150,15 @@ section:first-child {
     display:flex;
 }
 
+.top-nav-link{
+    margin-right: 2ch;
+}
+
+.top-nav-link:last-child{
+    margin-right: 0;
+}
+
 .top-nav a:link, #logo-link {
-    margin-left: 2ch;
     text-decoration: none;
 }
 
@@ -201,10 +207,6 @@ section:first-child {
     width: 100%;
 }
 
-section#index {
-    position: relative;
-}
-
 #logo {
     border-radius: 100%;
     height: 25px;
@@ -217,7 +219,6 @@ section#index {
 #logo-bounds {
     align-items: center;
     display:flex;
-    justify-content: space-between;
 }
 
 #logo-text {
