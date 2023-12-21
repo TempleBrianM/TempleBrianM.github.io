@@ -45,12 +45,16 @@
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--clr-bg);
     color: var(--clr-txt);
     display: flex;
-    font: 16px monospace;
     flex-direction: column;
+    font: 16px monospace;
     margin: 0px;
     min-height: 100vh;
     width: 100%;
@@ -89,10 +93,6 @@ header #header-content {
     width: 100%;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 main {
     display: flex;
     flex-direction: column;
@@ -107,6 +107,7 @@ main {
 /*TODO create visual border for sections (have a default border and create individuals on demand as necessary)*/
 section {
     margin: 3em 0 0;
+    scroll-margin-top: 4em;
 }
 
 section#index {
@@ -114,13 +115,12 @@ section#index {
     position: relative;
 }
 
+p {
+  text-indent: 4ch;
+}
+
 .credit {
     color: var(--clr-txt-drk);
-    display:flex;
-    flex-direction: column;
-    font-size: 0.8em;
-    justify-content: center;
-    margin: 0px;
     text-align: center;
 }
 
@@ -142,14 +142,6 @@ section#index {
     filter: hue-rotate(var(--crt-hr)) saturate(var(--crt-s)) brightness(var(--crt-b)) grayscale(var(--crt-gs));
     width: 100%;
     }
-
-.design {
-    height: 20em;
-    width: 100%;
-    background-color: var(--clr-bg);
-    border-radius: 2em;
-    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, var(--clr-bg) 50px ), repeating-linear-gradient( var(--clr-accnt), var(--clr-accnt) );
-}
 
 .fader {
     animation: fade var(--duration) ease var(--delay) backwards;
@@ -216,25 +208,21 @@ section#index {
     width: 25px;
 }
 
-#logo-bounds {
+#logo-link {
     align-items: center;
     display:flex;
-}
-
-#logo-text {
-    margin: 0px;
 }
 
 #profile-picture {
     border: 3px solid var(--clr-accnt);
     border-radius: 5% 30%;
     height: 200px;
-    margin-right: 3em;
+    margin-right: 3ch;
     object-fit: cover;
     width: 200px;
 }
 
-/**/@keyframes blinking {
+@keyframes blinking {
     0%, 100% { border-color: transparent; }
     50% { border-color: var(--clr-accnt); }
 }
