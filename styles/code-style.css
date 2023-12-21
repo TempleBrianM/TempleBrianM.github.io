@@ -17,9 +17,13 @@
     --clr-accnt-click:      hsl(203, 64%, 37%);
     --mn-mx-width:          1100px;
     --second-per-char:      10ms;
+    --crt-hr:               180deg;
+    --crt-s:                0;
+    --crt-b:                1;
+    --crt-gs:               50%;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
     :root {
         color-scheme: dark;
         --clr-bg:               hsl(240, 6%, 10%);
@@ -32,6 +36,10 @@
         --clr-accnt-click:      hsl(203, 64%, 37%);
         --mn-mx-width:          1100px;
         --second-per-char:      10ms;
+        --crt-hr:               180deg;
+        --crt-s:                1;
+        --crt-b:                0.25;
+        --crt-gs:               50%;
     }
 }
 
@@ -114,6 +122,7 @@ section:first-child {
     box-shadow: 0px 0px 5px 5px var(--clr-hd-shdw);
     height: auto;
     z-index: 2;
+    filter: hue-rotate(var(--crt-hr)) saturate(var(--crt-s)) brightness(var(--crt-b)) grayscale(var(--crt-gs));
 }
 
 .design {
@@ -190,7 +199,6 @@ section:first-child {
 
 section#index {
     position: relative;
-    background-color: var(--clr-crt-bg);
 }
 
 #logo {
