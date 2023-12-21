@@ -147,20 +147,20 @@ section:first-child {
     display:flex;
 }
 
-.top-nav a:link {
+.top-nav a:link, #logo-link {
     margin-left: 2ch;
     text-decoration: none;
 }
 
-.top-nav a:link, a:visited {
+.top-nav a:link, .top-nav a:visited, a:link#logo-link, a:visited#logo-link {
     color:var(--clr-txt);
 }
 
-.top-nav a:hover {
+.top-nav a:hover, a:hover#logo-link {
     color: var(--clr-accnt);
 }
 
-.top-nav a:active {
+.top-nav a:active, a:active#logo-link {
     color: var(--clr-accnt-click);
 }
 
@@ -214,10 +214,6 @@ section#index {
     align-items: center;
     display:flex;
     justify-content: space-between;
-}
-
-#logo-link {
-    text-decoration: none;
 }
 
 #logo-text {
