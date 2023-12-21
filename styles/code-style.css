@@ -16,7 +16,6 @@
     --clr-accnt: hsl(203, 92%, 59%);
     --clr-accnt-click: hsl(203, 64%, 37%);
     --mn-mx-width: 1100px;
-    --second-per-char: 10ms;
 }
 
 @media (prefers-color-scheme: light) {
@@ -39,12 +38,11 @@ body {
     background-color: var(--clr-bg);
     color: var(--clr-txt);
     display: flex;
-    font-family:monospace;
-    font-size: 16px;
+    font: 16px monospace;
     flex-direction: column;
     margin: 0px;
-    width: 100%;
     min-height: 100vh;
+    width: 100%;
 }
 
 footer {
@@ -52,11 +50,6 @@ footer {
     box-shadow: 0px -5px 10px var(--clr-ft-shdw);
     margin-top: auto;
     width: 100%;
-}
-
-h1 {
-    font-size: 60px;
-    margin: 0px 0px 10px;
 }
 
 header {
@@ -112,9 +105,7 @@ section {
 }
 
 .fader {
-    animation: fade ease var(--duration);
-    animation-delay: var(--delay);
-    animation-fill-mode: backwards;
+    animation: fade var(--duration) ease var(--delay) backwards;
     display: flex;
 }
 
@@ -146,10 +137,10 @@ section {
 
 .typing {
     animation:
-        type calc(var(--char) * var(--second-per-char)) steps(var(--char), end),
+        type calc(var(--char) * var(--second-per-char)) steps(var(--char), end) backwards,
+        cursor calc(var(--char) * var(--second-per-char)) steps(var(--char), end),
         blinking 1s step-end calc(var(--char) * var(--second-per-char)) var(--num-blink);
     animation-delay: calc(var(--delay-char) * var(--second-per-char));
-    animation-fill-mode: backwards;
     border-right: .15em solid transparent;
     overflow: hidden;
     white-space: nowrap;
@@ -202,7 +193,7 @@ section {
 }
 
 #logo-link {
-text-decoration: none;
+    text-decoration: none;
 }
 
 #logo-text {
@@ -228,8 +219,11 @@ text-decoration: none;
     100% { opacity: 1; }
 }
 
+@keyframes cursor {
+    100% { border-color: var(--clr-accnt);}
+}
+
 @keyframes type {
-    0% { width: 0; border-color: transparent;}
-    1% { border-color: var(--clr-accnt);}
-    100% { width: 100%; border-color: var(--clr-accnt);}
-}/**/
+    0% { width: 0; }
+    100% { width: 100%; }
+}
