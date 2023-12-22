@@ -70,7 +70,7 @@ footer {
     background-color: var(--clr-ft);
     box-sizing: border-box;
     margin-top: auto;
-    padding: 1em max(calc((100% - var(--mn-mx-width)) / 2), var(--mn-padding));
+    padding: 0 max(calc((100% - var(--mn-mx-width)) / 2), var(--mn-padding));
 }
 
 main {
@@ -90,10 +90,6 @@ section {
     margin: 3em 0 0;
     padding: 10px;
     scroll-margin-top: 7em;
-}
-
-section:last-child {
-    margin-bottom: 3em;
 }
 
 section#index {
@@ -186,7 +182,7 @@ img.profile-picture {
 }
 
 .crt-monitor-overlay {
-    aspect-ratio: 2;
+    aspect-ratio: 2.4;
     border-radius: var(--border-radius);
     z-index: 2;
     filter: hue-rotate(var(--crt-hr)) saturate(var(--crt-s)) brightness(var(--crt-b)) grayscale(var(--crt-gs));
@@ -277,15 +273,29 @@ input[type=submit]:active {
 }
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-    .crt-content {
-        flex-direction: column;
+@media screen and (max-width: 800px) {
+
+    header {
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+
+    section:first-child {
+        margin-top: 1%;
     }
 
     section#contact {
         display: revert;
         justify-content: revert;
     }
+
+    nav.top-nav {
+        display:none;
+    }
+    .crt-content {
+        flex-direction: column;
+    }
+
     .container {
         width: 100%;
     }
