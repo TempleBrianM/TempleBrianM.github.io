@@ -1,7 +1,6 @@
-/*TODO Reorder Classes & Elements*/
 /*TODO Create variables for most/all hardcoded values*/
 /*TODO Variable Name Overhaul*/
-/*TODO Recolor*/
+/*TODO Add blue to all headers & topnav*/
 :root {
     color-scheme: light;
     --clr-bg:               hsl(240, 6%, 90%);
