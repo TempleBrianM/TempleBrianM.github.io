@@ -4,15 +4,18 @@
 :root {
     color-scheme: light;
     --clr-bg:               hsl(240, 6%, 90%);
-    --clr-crt-bg:           hsl(240, 6%, 25%);
-    --clr-hd:               hsla(240, 6%, 92%, 0.8);
-    --clr-hd-shdw:          hsl(240, 6%, 88%);
+    --clr-crt-bg:           hsl(240, 6%, 100%);
+    --clr-hd:               hsla(240, 6%, 100%, 0.8);
+    --clr-hd-shdw:          hsl(240, 6%, 70%);
     --clr-txt:              hsl(240, 6%, 11%);
     --clr-txt-click:        hsl(240, 6%, 40%);
     --clr-txt-drk:          hsl(240, 6%, 25%);
     --clr-accnt:            hsl(203, 92%, 50%);
-    --clr-accnt-click:      hsl(203, 64%, 63%);
+    --clr-accnt-click:      hsl(203, 92%, 37%);
+    --clr-accnt-light:      hsl(203, 92%, 54%);
     --mn-mx-width:          1100px;
+    --mn-padding:           1%;
+    --border-radius:        0.5em;
     --second-per-char:      10ms;
     --crt-hr:               180deg;
     --crt-s:                0;
@@ -25,19 +28,14 @@
         color-scheme: dark;
         --clr-bg:               hsl(240, 6%, 10%);
         --clr-crt-bg:           hsl(240, 6%, 15%);
+        --clr-section-bg:       hsl(240, 6%, 20%);
         --clr-hd:               hsla(240, 6%, 8%, 0.8);
         --clr-hd-shdw:          hsl(240, 6%, 4%);
         --clr-txt:              hsl(240, 6%, 89%);
         --clr-txt-click:        hsl(240, 6%, 60%);
         --clr-txt-drk:          hsl(240, 6%, 75%);
-        --clr-accnt:            hsl(203, 92%, 50%);
-        --clr-accnt-click:      hsl(203, 64%, 37%);
-        --mn-mx-width:          1100px;
-        --second-per-char:      10ms;
-        --crt-hr:               180deg;
         --crt-s:                1;
         --crt-b:                0.25;
-        --crt-gs:               50%;
     }
 }
 
@@ -48,10 +46,8 @@ html {
 body {
     background-color: var(--clr-bg);
     color: var(--clr-txt);
-    display: flex;
-    flex-direction: column;
-    font: 16px monospace;
-    margin: 0px;
+    font: 1.2em monospace;
+    margin: 0;
     min-height: 100vh;
     width: 100%;
 }
@@ -59,31 +55,28 @@ body {
 header {
     backdrop-filter: blur(0.2em);
     background-color: var(--clr-hd);
-    box-shadow: 0px 5px 10px var(--clr-hd-shdw);
+    box-shadow: 0 0.4em 0.7em var(--clr-hd-shdw);
+    box-sizing: border-box;
     display:flex;
     justify-content: space-between;
-    padding: 1em calc((100% - var(--mn-mx-width)) / 2);
+    padding: 1em max(calc((100% - var(--mn-mx-width)) / 2), var(--mn-padding));
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 997;
-    max-width: var(--mn-mx-width);
 }
 
 footer {
     background-color: var(--clr-ft);
+    box-sizing: border-box;
     margin-top: auto;
-    max-width: var(--mn-mx-width);
-    padding: 0 calc((100% - var(--mn-mx-width)) / 2);
-    width: 100%;
+    padding: 1em max(calc((100% - var(--mn-mx-width)) / 2), var(--mn-padding));
 }
 
 main {
-    display: flex;
-    flex-direction: column;
     margin: 0 auto;
     max-width: var(--mn-mx-width);
-    width: 100%;
+    padding: 0 var(--mn-padding);
 }
 
 /*TODO Projects Section*/
@@ -91,21 +84,39 @@ main {
 /*TODO Contact Section*/
 /*TODO create visual border for sections*/
 section {
+    background-color: var(--clr-crt-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0px 0px 5px 5px var(--clr-hd-shdw);
     margin: 3em 0 0;
-    scroll-margin-top: 4em;
+    padding: 10px;
+    scroll-margin-top: 7em;
+}
+
+section:last-child {
+    margin-bottom: 3em;
 }
 
 section#index {
+    padding: 0;
     display: flex;
     position: relative;
 }
 
-p {
+section#contact {
+    display: flex;
+    justify-content: space-between;
+}
+
+section#about p {
     text-indent: 4ch;
 }
 
 h4.credits {
     text-align: center;
+}
+
+.accent {
+    color: var(--clr-accnt);
 }
 
 a.logo {
@@ -156,7 +167,7 @@ img.logo-image {
 }
 
 img.profile-picture {
-    border: 3px solid var(--clr-accnt);
+    border: 3px solid var(--clr-txt);
     border-radius: 5% 30%;
     height: 200px;
     object-fit: cover;
@@ -164,9 +175,9 @@ img.profile-picture {
 }
 
 .crt-content {
-    color: var(--clr-accnt);
-    background-color: var(--clr-crt-bg);
     align-items: center;
+    color: var(--clr-accnt);
+    border-radius: var(--border-radius);
     display: flex;
     height: 100%;
     justify-content: center;
@@ -175,8 +186,8 @@ img.profile-picture {
 }
 
 .crt-monitor-overlay {
-    box-shadow: 0px 0px 5px 5px var(--clr-hd-shdw);
     aspect-ratio: 2;
+    border-radius: var(--border-radius);
     z-index: 2;
     filter: hue-rotate(var(--crt-hr)) saturate(var(--crt-s)) brightness(var(--crt-b)) grayscale(var(--crt-gs));
     width: 100%;
@@ -223,4 +234,59 @@ img.profile-picture {
 @keyframes type {
     0% { max-width: 0; }
     100% { max-width: 100%; }
+}
+
+input[type=text], input[type=email], select, textarea {
+    border: 1px solid var(clr-txt);
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+    margin-top: 0.45em;
+    margin-bottom: 1.2em;
+    padding: 0.9em;
+    resize: vertical;
+    width: 100%;
+}
+
+input[type=submit] {
+    background: var(--clr-crt-bg);
+    border: 0.25em solid var(--clr-accnt);
+    border-radius: calc(var(--border-radius) * 4);
+    color: var(--clr-accnt);
+    cursor: pointer;
+    font-weight: bold;
+    padding: 1em 2ch;
+}
+
+input[type=submit]:hover {
+    border-color: var(--clr-accnt-click);
+    color: var(--clr-accnt-click);
+}
+
+input[type=submit]:active {
+    border-color: var(--clr-accnt-light);
+    color: var(--clr-accnt-light);
+}
+
+.container {
+    width: calc(50% - 5px);
+    padding-top: 1em;
+}
+
+.container h1:first-child{
+    margin: 0;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .crt-content {
+        flex-direction: column;
+    }
+
+    section#contact {
+        display: revert;
+        justify-content: revert;
+    }
+    .container {
+        width: 100%;
+    }
 }
