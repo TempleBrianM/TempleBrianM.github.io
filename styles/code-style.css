@@ -19,8 +19,8 @@
     --second-per-char:      10ms;
     --crt-hr:               180deg;
     --crt-s:                0;
-    --crt-b:                0.75;
-    --crt-gs:               50%;
+    --crt-b:                1;
+    --crt-gs:               0%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,8 +34,8 @@
         --clr-txt:              hsl(240, 6%, 89%);
         --clr-txt-click:        hsl(240, 6%, 60%);
         --clr-txt-drk:          hsl(240, 6%, 75%);
-        --crt-s:                1;
-        --crt-b:                0.25;
+        --crt-s:                1.5;
+        --crt-b:                0.15;
     }
 }
 
@@ -185,7 +185,10 @@ img.profile-picture {
     aspect-ratio: 2.4;
     border-radius: var(--border-radius);
     z-index: 2;
-    filter: hue-rotate(var(--crt-hr)) saturate(var(--crt-s)) brightness(var(--crt-b)) grayscale(var(--crt-gs));
+    filter: hue-rotate(var(--crt-hr))
+            saturate(var(--crt-s))
+            brightness(var(--crt-b))
+            grayscale(var(--crt-gs));
     width: 100%;
     }
 
