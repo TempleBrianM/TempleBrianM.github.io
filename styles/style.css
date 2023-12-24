@@ -153,7 +153,7 @@ a:active.logo, nav.top-nav a:active {
     color: var(--clr-accnt-click);
 }
 
-img.logo-image {
+img.logo-icon {
     margin: 0 1ch;
     height: 1em;
     object-fit: cover;
