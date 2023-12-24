@@ -10,9 +10,9 @@
     --clr-txt:              hsl(240, 6%, 11%);
     --clr-txt-click:        hsl(240, 6%, 40%);
     --clr-txt-drk:          hsl(240, 6%, 25%);
-    --clr-accnt:            hsl(203, 92%, 50%);
-    --clr-accnt-click:      hsl(203, 92%, 37%);
-    --clr-accnt-light:      hsl(203, 92%, 54%);
+    --clr-accnt:            hsl(205, 100%, 50%);
+    --clr-accnt-click:      hsl(205, 100%, 37%);
+    --clr-accnt-light:      hsl(205, 100%, 50%);
     --mn-mx-width:          1100px;
     --mn-padding:           1%;
     --border-radius:        0.5em;
