@@ -23,7 +23,7 @@
     --crt-gs:               0%;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
     :root {
         color-scheme: dark;
         --clr-bg:               hsl(240, 6%, 10%);
@@ -154,8 +154,7 @@ a:active.logo, nav.top-nav a:active {
 }
 
 img.logo-image {
-    border-radius: 100%;
-    margin-right: 1ch;
+    margin: 0 1ch;
     height: 1em;
     object-fit: cover;
     transition: 0.2s;
