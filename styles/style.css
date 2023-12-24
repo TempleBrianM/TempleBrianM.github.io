@@ -15,6 +15,7 @@
     --clr-accnt-light:      hsl(205, 100%, 50%);
     --mn-mx-width:          1100px;
     --mn-padding:           1%;
+    --section-padding:      10px;
     --border-radius:        0.5em;
     --second-per-char:      10ms;
     --crt-hr:               180deg;
@@ -59,7 +60,7 @@ header {
     box-sizing: border-box;
     display:flex;
     justify-content: space-between;
-    padding: 1em max(calc((100% - var(--mn-mx-width)) / 2), var(--mn-padding));
+    padding: 1em calc(max((100% - var(--mn-mx-width)) / 2, var(--mn-padding)) + var(--section-padding));
     position: sticky;
     top: 0;
     width: 100%;
@@ -70,7 +71,7 @@ footer {
     background-color: var(--clr-ft);
     box-sizing: border-box;
     margin-top: auto;
-    padding: 0 max(calc((100% - var(--mn-mx-width)) / 2), var(--mn-padding));
+    padding: 0 calc(max((100% - var(--mn-mx-width)) / 2, var(--mn-padding)) + var(--section-padding));
 }
 
 main {
@@ -88,7 +89,7 @@ section {
     border-radius: var(--border-radius);
     box-shadow: 0 0 0.4em 0.4em var(--clr-hd-shdw);
     margin: 3em 0 0;
-    padding: 10px;
+    padding: var(--section-padding);
     scroll-margin-top: 7em;
 }
 
@@ -115,11 +116,22 @@ h4.credits {
     color: var(--clr-accnt);
 }
 
-a.logo {
+.logo {
     align-items: center;
     display:flex;
     font-size: 1.5em;
     font-weight: bolder;
+}
+
+.logo-icon {
+    height: 1em;
+    object-fit: cover;
+    transition: 0.2s;
+    width: 1em;
+}
+
+.logo-wordmark {
+    margin: 0 0 0 1ch;
 }
 
 nav.top-nav {
@@ -151,14 +163,6 @@ a:hover.logo, nav.top-nav a:hover {
 
 a:active.logo, nav.top-nav a:active {
     color: var(--clr-accnt-click);
-}
-
-img.logo-icon {
-    margin: 0 1ch;
-    height: 1em;
-    object-fit: cover;
-    transition: 0.2s;
-    width: 1em;
 }
 
 img.profile-picture {
