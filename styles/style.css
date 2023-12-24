@@ -1,6 +1,4 @@
-/*TODO Create variables for most/all hardcoded values*/
 /*TODO Variable Name Overhaul*/
-/*TODO Add blue to all headers & topnav*/
 :root {
     color-scheme: light;
     --clr-bg:               hsl(240, 6%, 90%);
@@ -165,7 +163,7 @@ a:active.logo, nav.top-nav a:active {
     color: var(--clr-accnt-click);
 }
 
-img.profile-picture {
+.profile-picture {
     border: 3px solid var(--clr-txt);
     border-radius: 5% 30%;
     height: 200px;
