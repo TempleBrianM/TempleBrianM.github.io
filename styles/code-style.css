@@ -23,7 +23,7 @@
     --crt-gs:               0%;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
     :root {
         color-scheme: dark;
         --clr-bg:               hsl(240, 6%, 10%);
