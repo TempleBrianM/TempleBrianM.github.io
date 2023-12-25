@@ -1,15 +1,15 @@
 :root {
     color-scheme: light;
 
-    --clr-neutral:              hsl(205, 6%, 95%);
+    --clr-neutral:              hsl(205, 10%, 95%);
 
-    --clr-dark-neutral:         hsl(205, 6%, 10%);
-    --clr-dark-neutral-lt:      hsl(205, 6%, 20%);
-    --clr-dark-neutral-ltr:     hsl(205, 6%, 30%);
+    --clr-dark-neutral:         hsl(205, 10%, 10%);
+    --clr-dark-neutral-lt:      hsl(205, 10%, 20%);
+    --clr-dark-neutral-ltr:     hsl(205, 10%, 30%);
 
-    --clr-primary:              hsl(205, 6%, 100%);
-    --clr-secondary:            hsl(205, 6%, 100%);
-    --clr-secondary-tl:         hsla(205, 6%, 100%, 0.8);
+    --clr-primary:              hsl(205, 10%, 100%);
+    --clr-secondary:            hsl(205, 10%, 100%);
+    --clr-secondary-tl:         hsla(205, 10%, 100%, 0.8);
 
     --clr-accent:               hsl(205, 100%, 50%);
     --clr-accent-lt:            hsl(205, 100%, 60%);
@@ -26,7 +26,7 @@
     --crt-gs:                   0%;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
     :root {
         color-scheme: dark;
 
@@ -74,9 +74,10 @@ header {
 
 footer {
     background-color: var(--clr-secondary);
+    box-shadow: 0 0 0.3em 0.1em var(--clr-dark-neutral);
     box-sizing: border-box;
     margin-top: auto;
-    padding: 0 calc(max((100% - var(--mn-mx-width)) / 2, var(--mn-padding)) + var(--section-padding));
+    padding: 1em calc(max((100% - var(--mn-mx-width)) / 2, var(--mn-padding)) + var(--section-padding));
 }
 
 main {
@@ -98,6 +99,10 @@ section {
     scroll-margin-top: 7em;
 }
 
+section:last-child {
+    margin-bottom: 3em;
+}
+
 section#index {
     padding: 0;
     display: flex;
@@ -115,6 +120,7 @@ section#about p {
 
 h4.credits {
     text-align: center;
+    margin: 0;
 }
 
 .accent {
