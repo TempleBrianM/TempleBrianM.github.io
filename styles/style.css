@@ -26,6 +26,7 @@
     --crt-gs:                   0%;
 }
 
+/*TODO make buttons like youtube*/
 @media (prefers-color-scheme: light) {
     :root {
         color-scheme: dark;
