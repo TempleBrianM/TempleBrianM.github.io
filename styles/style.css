@@ -1,40 +1,47 @@
-/*TODO Variable Name Overhaul*/
 :root {
     color-scheme: light;
-    --clr-bg:               hsl(240, 6%, 90%);
-    --clr-crt-bg:           hsl(240, 6%, 100%);
-    --clr-hd:               hsla(240, 6%, 100%, 0.8);
-    --clr-hd-shdw:          hsl(240, 6%, 70%);
-    --clr-txt:              hsl(240, 6%, 11%);
-    --clr-txt-click:        hsl(240, 6%, 40%);
-    --clr-txt-drk:          hsl(240, 6%, 25%);
-    --clr-accnt:            hsl(205, 100%, 50%);
-    --clr-accnt-click:      hsl(205, 100%, 37%);
-    --clr-accnt-light:      hsl(205, 100%, 50%);
-    --mn-mx-width:          1100px;
-    --mn-padding:           1%;
-    --section-padding:      10px;
-    --border-radius:        0.5em;
-    --second-per-char:      10ms;
-    --crt-hr:               180deg;
-    --crt-s:                0;
-    --crt-b:                1;
-    --crt-gs:               0%;
+
+    --clr-neutral:              hsl(205, 6%, 95%);
+
+    --clr-dark-neutral:         hsl(205, 6%, 10%);
+    --clr-dark-neutral-lt:      hsl(205, 6%, 20%);
+    --clr-dark-neutral-ltr:     hsl(205, 6%, 30%);
+
+    --clr-primary:              hsl(205, 6%, 100%);
+    --clr-secondary:            hsl(205, 6%, 100%);
+    --clr-secondary-tl:         hsla(205, 6%, 100%, 0.8);
+
+    --clr-accent:               hsl(205, 100%, 50%);
+    --clr-accent-lt:            hsl(205, 100%, 60%);
+    --clr-accent-dk:            hsl(205, 100%, 37%);
+
+    --mn-mx-width:              1100px;
+    --mn-padding:               1%;
+    --section-padding:          10px;
+    --border-radius:            0.5em;
+    --second-per-char:          10ms;
+    --crt-hr:                   180deg;
+    --crt-s:                    0;
+    --crt-b:                    1;
+    --crt-gs:                   0%;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         color-scheme: dark;
-        --clr-bg:               hsl(240, 6%, 10%);
-        --clr-crt-bg:           hsl(240, 6%, 15%);
-        --clr-section-bg:       hsl(240, 6%, 20%);
-        --clr-hd:               hsla(240, 6%, 8%, 0.8);
-        --clr-hd-shdw:          hsl(240, 6%, 4%);
-        --clr-txt:              hsl(240, 6%, 89%);
-        --clr-txt-click:        hsl(240, 6%, 60%);
-        --clr-txt-drk:          hsl(240, 6%, 75%);
-        --crt-s:                1.5;
-        --crt-b:                0.15;
+
+        --clr-neutral:              hsl(205, 6%, 10%);
+
+        --clr-dark-neutral:         hsl(205, 6%, 89%);
+        --clr-dark-neutral-lt:      hsl(205, 6%, 60%);
+        --clr-dark-neutral-ltr:     hsl(205, 6%, 75%);
+
+        --clr-primary:              hsl(205, 6%, 20%);
+        --clr-secondary:            hsl(205, 6%, 15%);
+        --clr-secondary-tl:         hsla(205, 6%, 8%, 0.8);
+
+        --crt-s:                    1.5;
+        --crt-b:                    0.15;
     }
 }
 
@@ -43,8 +50,8 @@ html {
 }
 
 body {
-    background-color: var(--clr-bg);
-    color: var(--clr-txt);
+    background-color: var(--clr-neutral);
+    color: var(--clr-dark-neutral);
     font: 1.2em monospace;
     margin: 0;
     min-height: 100vh;
@@ -53,8 +60,8 @@ body {
 
 header {
     backdrop-filter: blur(0.2em);
-    background-color: var(--clr-hd);
-    box-shadow: 0 0 0.4em 0.4em var(--clr-hd-shdw);
+    background-color: var(--clr-secondary-tl);
+    box-shadow: 0 0 0.3em 0.1em var(--clr-dark-neutral);
     box-sizing: border-box;
     display:flex;
     justify-content: space-between;
@@ -66,7 +73,7 @@ header {
 }
 
 footer {
-    background-color: var(--clr-ft);
+    background-color: var(--clr-secondary);
     box-sizing: border-box;
     margin-top: auto;
     padding: 0 calc(max((100% - var(--mn-mx-width)) / 2, var(--mn-padding)) + var(--section-padding));
@@ -83,9 +90,9 @@ main {
 /*TODO Contact Section*/
 /*TODO create visual border for sections*/
 section {
-    background-color: var(--clr-crt-bg);
+    background-color: var(--clr-primary);
     border-radius: var(--border-radius);
-    box-shadow: 0 0 0.4em 0.4em var(--clr-hd-shdw);
+    box-shadow: 0 0 0.3em 0.1em var(--clr-dark-neutral);
     margin: 3em 0 0;
     padding: var(--section-padding);
     scroll-margin-top: 7em;
@@ -111,7 +118,7 @@ h4.credits {
 }
 
 .accent {
-    color: var(--clr-accnt);
+    color: var(--clr-accent);
 }
 
 .logo {
@@ -152,19 +159,19 @@ a.logo, nav.top-nav a:link {
 }
 
 a:link.logo, a:visited.logo, nav.top-nav a:link, .top-nav a:visited {
-    color:var(--clr-txt);
+    color:var(--clr-dark-neutral);
 }
 
 a:hover.logo, nav.top-nav a:hover {
-    color: var(--clr-accnt);
+    color: var(--clr-dark-neutral-lt);
 }
 
 a:active.logo, nav.top-nav a:active {
-    color: var(--clr-accnt-click);
+    color: var(--clr-dark-neutral-ltr);
 }
 
 .profile-picture {
-    border: 3px solid var(--clr-txt);
+    border: 3px solid var(--clr-accent);
     border-radius: 5% 30%;
     height: 200px;
     object-fit: cover;
@@ -173,7 +180,7 @@ a:active.logo, nav.top-nav a:active {
 
 .crt-content {
     align-items: center;
-    color: var(--clr-accnt);
+    color: var(--clr-accent);
     border-radius: var(--border-radius);
     display: flex;
     height: 100%;
@@ -219,11 +226,11 @@ a:active.logo, nav.top-nav a:active {
 
 @keyframes blinking {
     0%, 100% { border-color: transparent; }
-    50% { border-color: var(--clr-accnt); }
+    50% { border-color: var(--clr-accent); }
 }
 
 @keyframes cursor {
-    100% { border-color: var(--clr-accnt);}
+    100% { border-color: var(--clr-accent);}
 }
 
 @keyframes fade {
@@ -237,7 +244,7 @@ a:active.logo, nav.top-nav a:active {
 }
 
 input[type=text], input[type=email], select, textarea {
-    border: 1px solid var(clr-txt);
+    border: 1px solid var(clr-dark-neutral);
     border-radius: var(--border-radius);
     box-sizing: border-box;
     margin-top: 0.45em;
@@ -248,23 +255,21 @@ input[type=text], input[type=email], select, textarea {
 }
 
 input[type=submit] {
-    background: var(--clr-crt-bg);
-    border: 0.25em solid var(--clr-accnt);
+    background: var(--clr-primary);
+    border: 0.25em solid var(--clr-accent);
     border-radius: calc(var(--border-radius) * 4);
-    color: var(--clr-accnt);
+    color: var(--clr-dark-neutral);
     cursor: pointer;
     font-weight: bold;
     padding: 1em 2ch;
 }
 
 input[type=submit]:hover {
-    border-color: var(--clr-accnt-click);
-    color: var(--clr-accnt-click);
+    color: var(--clr-dark-neutral-lt);
 }
 
 input[type=submit]:active {
-    border-color: var(--clr-accnt-light);
-    color: var(--clr-accnt-light);
+    color: var(--clr-dark-neutral-ltr);
 }
 
 .container {
