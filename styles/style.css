@@ -192,6 +192,7 @@ nav.top-nav a:active {
     width: 200px;
 }
 
+/* TODO Upload properly colored crt monitor overlay */
 .crt-content {
     align-items: center;
     color: var(--clr-accent);
