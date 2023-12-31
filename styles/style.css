@@ -8,8 +8,12 @@
     --clr-dark-neutral-ltr:     hsl(205, 10%, 30%);
 
     --clr-primary:              hsl(205, 10%, 100%);
+
     --clr-secondary:            hsl(205, 10%, 100%);
     --clr-secondary-tl:         hsla(205, 10%, 100%, 0.8);
+
+    --clr-mask-dk:              hsla(0, 0%, 0%, 0.1);
+    --clr-mask-dkr:             hsla(0, 0%, 0%, 0.2);
 
     --clr-accent:               hsl(205, 100%, 50%);
     --clr-accent-lt:            hsl(205, 100%, 60%);
@@ -26,20 +30,21 @@
     --crt-gs:                   0%;
 }
 
-/*TODO make buttons like youtube*/
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
     :root {
         color-scheme: dark;
 
         --clr-neutral:              hsl(205, 6%, 10%);
 
         --clr-dark-neutral:         hsl(205, 6%, 89%);
-        --clr-dark-neutral-lt:      hsl(205, 6%, 60%);
-        --clr-dark-neutral-ltr:     hsl(205, 6%, 75%);
 
         --clr-primary:              hsl(205, 6%, 20%);
+
         --clr-secondary:            hsl(205, 6%, 15%);
         --clr-secondary-tl:         hsla(205, 6%, 8%, 0.8);
+
+        --clr-mask-dk:              hsla(0, 0%, 100%, 0.1);
+        --clr-mask-dkr:             hsla(0, 0%, 100%, 0.2);
 
         --crt-s:                    1.5;
         --crt-b:                    0.15;
@@ -66,7 +71,7 @@ header {
     box-sizing: border-box;
     display:flex;
     justify-content: space-between;
-    padding: 1em calc(max((100% - var(--mn-mx-width)) / 2, var(--mn-padding)) + var(--section-padding));
+    padding: 0.6em calc(max((100% - var(--mn-mx-width)) / 2, var(--mn-padding)) + var(--section-padding));
     position: sticky;
     top: 0;
     width: 100%;
@@ -155,6 +160,8 @@ nav.top-nav a{
     font-size: 1.25em;
     font-weight: bolder;
     margin-right: 2ch;
+    padding: 0.1em 0.1em 0.4em;
+    border-radius: calc(var(--border-radius) * 4);
 }
 
 nav.top-nav a:last-child{
@@ -169,12 +176,12 @@ a:link.logo, a:visited.logo, nav.top-nav a:link, .top-nav a:visited {
     color:var(--clr-dark-neutral);
 }
 
-a:hover.logo, nav.top-nav a:hover {
-    color: var(--clr-dark-neutral-lt);
+nav.top-nav a:hover {
+    background-color: var(--clr-mask-dk);
 }
 
-a:active.logo, nav.top-nav a:active {
-    color: var(--clr-dark-neutral-ltr);
+nav.top-nav a:active {
+    background-color: var(--clr-mask-dkr);
 }
 
 .profile-picture {
@@ -251,7 +258,8 @@ a:active.logo, nav.top-nav a:active {
 }
 
 input[type=text], input[type=email], select, textarea {
-    border: 1px solid var(clr-dark-neutral);
+    background: var(--clr-primary);
+    border: 1px solid var(--clr-dark-neutral);
     border-radius: var(--border-radius);
     box-sizing: border-box;
     margin-top: 0.45em;
@@ -263,8 +271,8 @@ input[type=text], input[type=email], select, textarea {
 
 input[type=submit] {
     background: var(--clr-primary);
-    border: 0.25em solid var(--clr-accent);
-    border-radius: calc(var(--border-radius) * 4);
+    border: 1px solid var(--clr-dark-neutral);
+    border-radius: var(--border-radius);
     color: var(--clr-dark-neutral);
     cursor: pointer;
     font-weight: bold;
@@ -272,11 +280,9 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    color: var(--clr-dark-neutral-lt);
 }
 
 input[type=submit]:active {
-    color: var(--clr-dark-neutral-ltr);
 }
 
 .container {
@@ -291,8 +297,8 @@ input[type=submit]:active {
 @media screen and (max-width: 1200px) {
 
     header {
-        padding-top: 1%;
-        padding-bottom: 1%;
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
     }
 
     section:first-child {
@@ -307,8 +313,8 @@ input[type=submit]:active {
 @media screen and (max-width: 800px) {
 
     header {
-        padding-top: 1%;
-        padding-bottom: 1%;
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
     }
 
     section:first-child {
