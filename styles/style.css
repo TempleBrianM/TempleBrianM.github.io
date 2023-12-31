@@ -141,10 +141,10 @@ h4.credits {
 }
 
 .logo-icon {
-    height: 1em;
+    height: 23px;
     object-fit: cover;
     transition: 0.2s;
-    width: 1em;
+    width: 23px;
 }
 
 .logo-wordmark {
