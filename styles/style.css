@@ -120,6 +120,9 @@ section#about p {
     text-indent: 4ch;
 }
 
+article.project {
+}
+
 h4.credits {
     text-align: center;
     margin: 0;
@@ -188,7 +191,6 @@ nav.top-nav a:active {
     width: 200px;
 }
 
-/* TODO Upload properly colored crt monitor overlay */
 .crt-content {
     align-items: center;
     color: var(--clr-accent);
@@ -211,7 +213,6 @@ nav.top-nav a:active {
     width: 100%;
     }
 
-/*TODO typing sound effect (and monitor turn on?)*/
 .typing {
     animation:
         type calc(var(--char) * var(--second-per-char)) steps(var(--char), end) backwards,
