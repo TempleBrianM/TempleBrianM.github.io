@@ -30,7 +30,7 @@
     --crt-gs:                   0%;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
     :root {
         color-scheme: dark;
 
@@ -95,7 +95,6 @@ main {
 /*TODO Projects Section*/
 /*TODO About Section*/
 /*TODO Contact Section*/
-/*TODO create visual border for sections*/
 section {
     background-color: var(--clr-primary);
     border-radius: var(--border-radius);
@@ -184,7 +183,7 @@ nav.top-nav a:active {
     background-color: var(--clr-mask-dkr);
 }
 
-.profile-picture {
+.brian-temple-headshot {
     border: 3px solid var(--clr-accent);
     border-radius: 5% 30%;
     height: 200px;
@@ -215,11 +214,6 @@ nav.top-nav a:active {
     width: 100%;
     }
 
-.fader {
-    animation: fade var(--duration) ease var(--delay) backwards;
-    display: flex;
-}
-
 /*TODO typing sound effect (and monitor turn on?)*/
 .typing {
     animation:
@@ -246,11 +240,6 @@ nav.top-nav a:active {
 
 @keyframes cursor {
     100% { border-color: var(--clr-accent);}
-}
-
-@keyframes fade {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
 }
 
 @keyframes type {
@@ -329,10 +318,6 @@ input[type=submit]:active {
 
     nav.top-nav {
         display:none;
-    }
-
-    img.profile-picture {
-        display: none;
     }
 
     .container {
