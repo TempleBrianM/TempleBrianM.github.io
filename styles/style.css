@@ -92,9 +92,6 @@ main {
     padding: 0 var(--mn-padding);
 }
 
-/*TODO Projects Section*/
-/*TODO About Section*/
-/*TODO Contact Section*/
 section {
     background-color: var(--clr-primary);
     border-radius: var(--border-radius);
