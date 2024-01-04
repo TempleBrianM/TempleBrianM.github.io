@@ -105,22 +105,11 @@ section:last-child {
     margin-bottom: 3em;
 }
 
+/* Touching this code may break CRT effect */
 section#index {
     padding: 0;
     display: flex;
     position: relative;
-}
-
-section#contact {
-    display: flex;
-    justify-content: space-between;
-}
-
-section#about p {
-    text-indent: 4ch;
-}
-
-article.project {
 }
 
 h4.credits {
@@ -183,14 +172,6 @@ nav.top-nav a:active {
     background-color: var(--clr-mask-dkr);
 }
 
-.brian-temple-headshot {
-    border: 3px solid var(--clr-accent);
-    border-radius: 5% 30%;
-    height: 200px;
-    object-fit: cover;
-    width: 200px;
-}
-
 .crt-content {
     align-items: center;
     color: var(--clr-accent);
@@ -200,6 +181,13 @@ nav.top-nav a:active {
     justify-content: center;
     position: absolute;
     width: 100%;
+}
+
+.brian-temple-headshot {
+    border-radius: 5% 30%;
+    object-fit: cover;
+    margin: 1em;
+    width: 200px;
 }
 
 .crt-monitor-overlay {
@@ -212,6 +200,19 @@ nav.top-nav a:active {
             grayscale(var(--crt-gs));
     width: 100%;
     }
+
+.project-preview {
+    margin: 1em;
+    width:200px;
+}
+
+.left {
+    margin-left: 0;
+}
+
+.right {
+    margin-right: 0;
+}
 
 .typing {
     animation:
@@ -273,13 +274,17 @@ input[type=submit]:hover {
 input[type=submit]:active {
 }
 
-.container {
-    width: calc(50% - 5px);
-    padding-top: 1em;
+.column {
+    display: flex;
+    justify-content: center;
 }
 
-.container h1:first-child{
-    margin: 0;
+.container {
+    width: calc(50% - 5px);
+}
+
+.no-margin {
+    margin:0;
 }
 
 @media screen and (max-width: 1200px) {

@@ -10,3 +10,4 @@
 - [ ] Dark mode white shadow effect feels weird
 - [ ] About section text rewrite
 - [ ] Contact section slogan
+- [ ] Scroll to height fix
