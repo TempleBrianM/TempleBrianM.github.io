@@ -171,11 +171,43 @@ input[type=submit]:active {
     /* … */
 }
 
+.brian-temple-headshot {
+    border-radius: 5% 30%;
+    object-fit: cover;
+    margin: 0 2ch 0 0;
+    width: 200px;
+    /* … */
+}
+
+.crt-monitor-overlay {
+    aspect-ratio: 2.4;
+    border-radius: var(--border-radius);
+    z-index: 2;
+    filter: hue-rotate(var(--crt-hr))
+            saturate(var(--crt-s))
+            brightness(var(--crt-b))
+            grayscale(var(--crt-gs));
+    width: 100%;
+    /* … */
+}
+
+.project-preview {
+    box-sizing: border-box;
+    padding: 0 2ch;
+    max-height: 400px;
+    max-width: 100%;
+    /* … */
+}
+
 /* || UTILITIES */
 
 .accent {
     color: var(--clr-accent);
     /* … */
+}
+
+.center {
+    align-items: center;
 }
 
 .column {
@@ -185,6 +217,17 @@ input[type=submit]:active {
 }
 
 .container-column-half {
+    max-width: calc(50% - 5px);
+    margin-bottom: 2em;
+    /* … */
+}
+
+.container-column-half *:first-child {
+    margin-top:0;
+    /* … */
+}
+
+.container-column-half-full {
     width: calc(50% - 5px);
     /* … */
 }
@@ -206,13 +249,13 @@ input[type=submit]:active {
     /* … */
 }
 
-.no-margin-left {
-    margin-left: 0;
+.no-padding-left {
+    padding-left: 0;
     /* … */
 }
 
-.no-margin-right {
-    margin-right: 0;
+.no-padding-right {
+    padding-right: 0;
     /* … */
 }
 
@@ -277,35 +320,6 @@ nav.top-nav a:hover {
 
 nav.top-nav a:active {
     background-color: var(--clr-mask-dkr);
-    /* … */
-}
-
-/* || UNSORTED IMAGES */
-
-.brian-temple-headshot {
-    border-radius: 5% 30%;
-    object-fit: cover;
-    margin: 0 2ch 0 0;
-    width: 200px;
-    /* … */
-}
-
-.crt-monitor-overlay {
-    aspect-ratio: 2.4;
-    border-radius: var(--border-radius);
-    z-index: 2;
-    filter: hue-rotate(var(--crt-hr))
-            saturate(var(--crt-s))
-            brightness(var(--crt-b))
-            grayscale(var(--crt-gs));
-    width: 100%;
-    /* … */
-}
-
-/* TODO make missing image set width*/
-.project-preview {
-    margin: 0 2ch;
-    width: 200px;
     /* … */
 }
 
