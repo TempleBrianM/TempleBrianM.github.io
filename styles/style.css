@@ -124,6 +124,40 @@ section#index {
     /* … */
 }
 
+section#projects {
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: 0 0 0 #000;
+    padding: 0;
+}
+
+.design {
+    background-color: var(--clr-primary);
+    padding: var(--section-padding);
+    position: relative;
+}
+
+.design:before {
+    bottom: 0;
+    box-shadow: 0 0 0.3em 0.1em var(--clr-dark-neutral);
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.design:first-child,
+.design:first-child:before {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.design:last-child,
+.design:last-child:before {
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
 a:link.logo, a:visited.logo {
     text-decoration: none;
     color:var(--clr-dark-neutral);
@@ -218,7 +252,6 @@ input[type=submit]:active {
 
 .container-column-half {
     max-width: calc(50% - 5px);
-    margin-bottom: 2em;
     /* … */
 }
 
