@@ -11,3 +11,4 @@
 - [ ] About section text rewrite
 - [ ] Contact section slogan
 - [ ] Scroll to height fix
+- [ ] Footer not at bottom fix

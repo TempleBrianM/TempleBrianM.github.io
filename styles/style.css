@@ -112,31 +112,45 @@ section#index {
     position: relative;
 }
 
+a:link.logo, a:visited.logo {
+    text-decoration: none;
+    color:var(--clr-dark-neutral);
+}
+
 h4.credits {
     text-align: center;
     margin: 0;
 }
 
-.accent {
-    color: var(--clr-accent);
+img.brian-temple-headshot {
+    border-radius: 5% 30%;
+    object-fit: cover;
+    margin: 1em;
+    width: 200px;
 }
 
-.logo {
-    align-items: center;
-    display:flex;
-    font-size: 1.5em;
-    font-weight: bolder;
+img.crt-monitor-overlay {
+    aspect-ratio: 2.4;
+    border-radius: var(--border-radius);
+    z-index: 2;
+    filter: hue-rotate(var(--crt-hr))
+            saturate(var(--crt-s))
+            brightness(var(--crt-b))
+            grayscale(var(--crt-gs));
+    width: 100%;
 }
 
-.logo-icon {
+img.logo-icon {
     height: 23px;
     object-fit: cover;
     transition: 0.2s;
     width: 23px;
 }
 
-.logo-wordmark {
-    margin: 0 0 0 1ch;
+/* TODO make missing image set width*/
+img.project-preview {
+    margin: 1em;
+    width: 200px;
 }
 
 nav.top-nav {
@@ -156,12 +170,40 @@ nav.top-nav a:last-child{
     margin-right: 0;
 }
 
-a.logo, nav.top-nav a:link {
+nav.top-nav a:link {
     text-decoration: none;
 }
 
-a:link.logo, a:visited.logo, nav.top-nav a:link, .top-nav a:visited {
+nav.top-nav a:link, nav.top-nav a:visited {
     color:var(--clr-dark-neutral);
+}
+
+input[type=text], input[type=email], select, textarea {
+    background: var(--clr-primary);
+    border: 1px solid var(--clr-dark-neutral);
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+    margin-top: 0.45em;
+    margin-bottom: 1.2em;
+    padding: 0.9em;
+    resize: vertical;
+    width: 100%;
+}
+
+input[type=submit] {
+    background: var(--clr-primary);
+    border: 1px solid var(--clr-dark-neutral);
+    border-radius: var(--border-radius);
+    color: var(--clr-dark-neutral);
+    cursor: pointer;
+    font-weight: bold;
+    padding: 1em 2ch;
+}
+
+input[type=submit]:hover {
+}
+
+input[type=submit]:active {
 }
 
 nav.top-nav a:hover {
@@ -172,7 +214,17 @@ nav.top-nav a:active {
     background-color: var(--clr-mask-dkr);
 }
 
-.crt-content {
+
+.accent {
+    color: var(--clr-accent);
+}
+
+.column {
+    display: flex;
+    justify-content: center;
+}
+
+.container-crt {
     align-items: center;
     color: var(--clr-accent);
     border-radius: var(--border-radius);
@@ -183,34 +235,30 @@ nav.top-nav a:active {
     width: 100%;
 }
 
-.brian-temple-headshot {
-    border-radius: 5% 30%;
-    object-fit: cover;
-    margin: 1em;
-    width: 200px;
+.container-contact-forum {
+    width: calc(50% - 5px);
 }
 
-.crt-monitor-overlay {
-    aspect-ratio: 2.4;
-    border-radius: var(--border-radius);
-    z-index: 2;
-    filter: hue-rotate(var(--crt-hr))
-            saturate(var(--crt-s))
-            brightness(var(--crt-b))
-            grayscale(var(--crt-gs));
-    width: 100%;
-    }
-
-.project-preview {
-    margin: 1em;
-    width:200px;
+.logo {
+    align-items: center;
+    display:flex;
+    font-size: 1.5em;
+    font-weight: bolder;
 }
 
-.left {
+.logo-wordmark {
+    margin: 0 0 0 1ch;
+}
+
+.no-margin {
+    margin:0;
+}
+
+.no-margin-left {
     margin-left: 0;
 }
 
-.right {
+.no-margin-right {
     margin-right: 0;
 }
 
@@ -244,47 +292,6 @@ nav.top-nav a:active {
 @keyframes type {
     0% { max-width: 0; }
     100% { max-width: 100%; }
-}
-
-input[type=text], input[type=email], select, textarea {
-    background: var(--clr-primary);
-    border: 1px solid var(--clr-dark-neutral);
-    border-radius: var(--border-radius);
-    box-sizing: border-box;
-    margin-top: 0.45em;
-    margin-bottom: 1.2em;
-    padding: 0.9em;
-    resize: vertical;
-    width: 100%;
-}
-
-input[type=submit] {
-    background: var(--clr-primary);
-    border: 1px solid var(--clr-dark-neutral);
-    border-radius: var(--border-radius);
-    color: var(--clr-dark-neutral);
-    cursor: pointer;
-    font-weight: bold;
-    padding: 1em 2ch;
-}
-
-input[type=submit]:hover {
-}
-
-input[type=submit]:active {
-}
-
-.column {
-    display: flex;
-    justify-content: center;
-}
-
-.container {
-    width: calc(50% - 5px);
-}
-
-.no-margin {
-    margin:0;
 }
 
 @media screen and (max-width: 1200px) {
