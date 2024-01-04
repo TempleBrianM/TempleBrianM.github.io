@@ -28,6 +28,7 @@
     --crt-s:                    0;
     --crt-b:                    1;
     --crt-gs:                   0%;
+    /* … */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -49,10 +50,14 @@
         --crt-s:                    1.5;
         --crt-b:                    0.15;
     }
+    /* … */
 }
+
+/* || GENERAL STYLES */
 
 html {
     scroll-behavior: smooth;
+    /* … */
 }
 
 body {
@@ -62,6 +67,7 @@ body {
     margin: 0;
     min-height: 100vh;
     width: 100%;
+    /* … */
 }
 
 header {
@@ -76,6 +82,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 997;
+    /* … */
 }
 
 footer {
@@ -84,12 +91,14 @@ footer {
     box-sizing: border-box;
     margin-top: auto;
     padding: 1em calc(max((100% - var(--mn-mx-width)) / 2, var(--mn-padding)) + var(--section-padding));
+    /* … */
 }
 
 main {
     margin: 0 auto;
     max-width: var(--mn-mx-width);
     padding: 0 var(--mn-padding);
+    /* … */
 }
 
 section {
@@ -99,86 +108,38 @@ section {
     margin: 3em 0 0;
     padding: var(--section-padding);
     scroll-margin-top: 7em;
+    /* … */
 }
 
 section:last-child {
     margin-bottom: 3em;
+    /* … */
 }
 
-/* Touching this code may break CRT effect */
 section#index {
     padding: 0;
+    /* Altering the following line may break CRT effect */
     display: flex;
     position: relative;
+    /* … */
 }
 
 a:link.logo, a:visited.logo {
     text-decoration: none;
     color:var(--clr-dark-neutral);
+    /* … */
 }
 
 h4.credits {
     text-align: center;
     margin: 0;
+    /* … */
 }
 
-img.brian-temple-headshot {
-    border-radius: 5% 30%;
-    object-fit: cover;
-    margin: 1em;
-    width: 200px;
-}
-
-img.crt-monitor-overlay {
-    aspect-ratio: 2.4;
-    border-radius: var(--border-radius);
-    z-index: 2;
-    filter: hue-rotate(var(--crt-hr))
-            saturate(var(--crt-s))
-            brightness(var(--crt-b))
-            grayscale(var(--crt-gs));
-    width: 100%;
-}
-
-img.logo-icon {
-    height: 23px;
-    object-fit: cover;
-    transition: 0.2s;
-    width: 23px;
-}
-
-/* TODO make missing image set width*/
-img.project-preview {
-    margin: 1em;
-    width: 200px;
-}
-
-nav.top-nav {
-    align-items: center;
-    display:flex;
-}
-
-nav.top-nav a{
-    font-size: 1.25em;
-    font-weight: bolder;
-    margin-right: 2ch;
-    padding: 0.1em 0.1em 0.4em;
-    border-radius: calc(var(--border-radius) * 4);
-}
-
-nav.top-nav a:last-child{
-    margin-right: 0;
-}
-
-nav.top-nav a:link {
-    text-decoration: none;
-}
-
-nav.top-nav a:link, nav.top-nav a:visited {
-    color:var(--clr-dark-neutral);
-}
-
-input[type=text], input[type=email], select, textarea {
+input[type=text],
+input[type=email],
+select,
+textarea {
     background: var(--clr-primary);
     border: 1px solid var(--clr-dark-neutral);
     border-radius: var(--border-radius);
@@ -188,6 +149,7 @@ input[type=text], input[type=email], select, textarea {
     padding: 0.9em;
     resize: vertical;
     width: 100%;
+    /* … */
 }
 
 input[type=submit] {
@@ -198,30 +160,33 @@ input[type=submit] {
     cursor: pointer;
     font-weight: bold;
     padding: 1em 2ch;
+    /* … */
 }
 
 input[type=submit]:hover {
+    /* … */
 }
 
 input[type=submit]:active {
+    /* … */
 }
 
-nav.top-nav a:hover {
-    background-color: var(--clr-mask-dk);
-}
-
-nav.top-nav a:active {
-    background-color: var(--clr-mask-dkr);
-}
-
+/* || UTILITIES */
 
 .accent {
     color: var(--clr-accent);
+    /* … */
 }
 
 .column {
     display: flex;
     justify-content: center;
+    /* … */
+}
+
+.container-column-half {
+    width: calc(50% - 5px);
+    /* … */
 }
 
 .container-crt {
@@ -233,34 +198,118 @@ nav.top-nav a:active {
     justify-content: center;
     position: absolute;
     width: 100%;
+    /* … */
 }
 
-.container-contact-forum {
-    width: calc(50% - 5px);
+.no-margin {
+    margin:0;
+    /* … */
 }
+
+.no-margin-left {
+    margin-left: 0;
+    /* … */
+}
+
+.no-margin-right {
+    margin-right: 0;
+    /* … */
+}
+
+/* || SITEWIDE */
 
 .logo {
     align-items: center;
     display:flex;
     font-size: 1.5em;
     font-weight: bolder;
+    /* … */
+}
+
+.logo-icon {
+    height: 23px;
+    object-fit: cover;
+    transition: 0.2s;
+    width: 23px;
+    /* … */
 }
 
 .logo-wordmark {
     margin: 0 0 0 1ch;
+    /* … */
 }
 
-.no-margin {
-    margin:0;
+nav.top-nav {
+    align-items: center;
+    display:flex;
+    /* … */
 }
 
-.no-margin-left {
-    margin-left: 0;
+nav.top-nav a{
+    font-size: 1.25em;
+    font-weight: bolder;
+    margin-right: 2ch;
+    padding: 0.1em 0.1em 0.4em;
+    border-radius: calc(var(--border-radius) * 4);
+    /* … */
 }
 
-.no-margin-right {
+nav.top-nav a:last-child{
     margin-right: 0;
+    /* … */
 }
+
+nav.top-nav a:link {
+    text-decoration: none;
+    /* … */
+}
+
+nav.top-nav a:link,
+nav.top-nav a:visited {
+    color:var(--clr-dark-neutral);
+    /* … */
+}
+
+nav.top-nav a:hover {
+    background-color: var(--clr-mask-dk);
+    /* … */
+}
+
+nav.top-nav a:active {
+    background-color: var(--clr-mask-dkr);
+    /* … */
+}
+
+/* || UNSORTED IMAGES */
+
+.brian-temple-headshot {
+    border-radius: 5% 30%;
+    object-fit: cover;
+    margin: 0 2ch 0 0;
+    width: 200px;
+    /* … */
+}
+
+.crt-monitor-overlay {
+    aspect-ratio: 2.4;
+    border-radius: var(--border-radius);
+    z-index: 2;
+    filter: hue-rotate(var(--crt-hr))
+            saturate(var(--crt-s))
+            brightness(var(--crt-b))
+            grayscale(var(--crt-gs));
+    width: 100%;
+    /* … */
+}
+
+/* TODO make missing image set width*/
+.project-preview {
+    margin: 0 2ch;
+    width: 200px;
+    /* … */
+}
+
+/* || ANIMATION */
 
 .typing {
     animation:
@@ -272,26 +321,31 @@ nav.top-nav a:active {
     overflow: hidden;
     white-space: pre;
     margin: 0 0 0 2ch;
+    /* … */
 }
 
 .typing-content {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
+    /* … */
 }
 
 @keyframes blinking {
     0%, 100% { border-color: transparent; }
     50% { border-color: var(--clr-accent); }
+    /* … */
 }
 
 @keyframes cursor {
     100% { border-color: var(--clr-accent);}
+    /* … */
 }
 
 @keyframes type {
     0% { max-width: 0; }
     100% { max-width: 100%; }
+    /* … */
 }
 
 @media screen and (max-width: 1200px) {
@@ -308,6 +362,7 @@ nav.top-nav a:active {
     h3.typing {
         font-size: 0.8em;
     }
+    /* … */
 }
 
 @media screen and (max-width: 800px) {
@@ -333,4 +388,5 @@ nav.top-nav a:active {
     .container {
         width: 100%;
     }
+    /* … */
 }
