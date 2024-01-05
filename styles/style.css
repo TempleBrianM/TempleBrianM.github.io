@@ -257,6 +257,11 @@ input[type=submit]:active {
     /* … */
 }
 
+.container-column-half-full{
+    width: 50%;
+    /* … */
+}
+
 .container-column-half *:first-child {
     margin-top:0;
     /* … */
