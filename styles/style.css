@@ -354,10 +354,6 @@ nav.top-nav a:hover {
     /* … */
 }
 
-*:hover {
-    box-shadow: 0 0 0.3em 0.1em var(--clr-accent);
-}
-
 nav.top-nav a:active {
     background-color: var(--clr-mask-dkr);
     /* … */
