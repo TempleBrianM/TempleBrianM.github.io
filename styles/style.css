@@ -107,9 +107,14 @@ section {
     background-color: var(--clr-primary);
     border-radius: var(--border-radius);
     box-shadow: 0 0 0.3em 0.1em var(--clr-primary);
-    margin: 3em 0 0;
+    margin: 2em 0 0;
     padding: var(--section-padding);
-    scroll-margin-top: 7em;
+    scroll-margin-top: 4em;
+    /* … */
+}
+
+section:first-child {
+    margin-top: 0.5em;
     /* … */
 }
 
