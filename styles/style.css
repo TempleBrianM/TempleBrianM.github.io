@@ -8,6 +8,7 @@
     --clr-dark-neutral-ltr:     hsl(205, 10%, 30%);
 
     --clr-primary:              hsl(205, 10%, 100%);
+    --clr-primary-dk:           hsl(205, 10%, 95%);
 
     --clr-secondary:            hsl(205, 10%, 100%);
     --clr-secondary-tl:         hsla(205, 10%, 100%, 0.8);
@@ -35,14 +36,15 @@
     :root {
         color-scheme: dark;
 
-        --clr-neutral:              hsl(205, 6%, 10%);
+        --clr-neutral:              hsl(205, 10%, 10%);
 
-        --clr-dark-neutral:         hsl(205, 6%, 89%);
+        --clr-dark-neutral:         hsl(205, 10%, 89%);
 
-        --clr-primary:              hsl(205, 6%, 20%);
+        --clr-primary:              hsl(205, 10%, 20%);
+        --clr-primary-dk:           hsl(205, 10%, 25%);
 
-        --clr-secondary:            hsl(205, 6%, 15%);
-        --clr-secondary-tl:         hsla(205, 6%, 8%, 0.8);
+        --clr-secondary:            hsl(205, 10%, 15%);
+        --clr-secondary-tl:         hsla(205, 10%, 8%, 0.8);
 
         --clr-mask-dk:              hsla(0, 0%, 100%, 0.1);
         --clr-mask-dkr:             hsla(0, 0%, 100%, 0.2);
@@ -73,7 +75,7 @@ body {
 header {
     backdrop-filter: blur(0.2em);
     background-color: var(--clr-secondary-tl);
-    box-shadow: 0 0 0.3em 0.1em var(--clr-dark-neutral);
+    box-shadow: 0 0 0.3em 0.1em var(--clr-secondary-tl);
     box-sizing: border-box;
     display:flex;
     justify-content: space-between;
@@ -87,7 +89,7 @@ header {
 
 footer {
     background-color: var(--clr-secondary);
-    box-shadow: 0 0 0.3em 0.1em var(--clr-dark-neutral);
+    box-shadow: 0 0 0.3em 0.1em var(--clr-secondary);
     box-sizing: border-box;
     margin-top: auto;
     padding: 1em calc(max((100% - var(--mn-mx-width)) / 2, var(--mn-padding)) + var(--section-padding));
@@ -104,7 +106,7 @@ main {
 section {
     background-color: var(--clr-primary);
     border-radius: var(--border-radius);
-    box-shadow: 0 0 0.3em 0.1em var(--clr-dark-neutral);
+    box-shadow: 0 0 0.3em 0.1em var(--clr-primary);
     margin: 3em 0 0;
     padding: var(--section-padding);
     scroll-margin-top: 7em;
@@ -125,9 +127,8 @@ section#index {
 }
 
 section#projects {
-    background-color: transparent;
-    border-radius: 0;
-    box-shadow: 0 0 0 #000;
+    background-color: var(--clr-primary-dk);
+    box-shadow: 0 0 0.3em 0.1em var(--clr-primary-dk);
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -138,27 +139,18 @@ section#projects {
     background-color: var(--clr-primary);
     padding: var(--section-padding);
     position: relative;
+    box-shadow: 0 0 0.3em 0.1em var(--clr-primary);
+    border-radius: var(--border-radius);
+    margin: var(--section-padding);
 }
 
-.design:before {
-    bottom: 0;
-    box-shadow: 0 0 0.3em 0.1em var(--clr-dark-neutral);
-    content: "";
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -1;
-}
-
-.design:first-child,
-.design:first-child:before {
+.design:first-child {
+    margin: 0 0 var(--section-padding) 0;
     border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
-.design:last-child,
-.design:last-child:before {
-    border-radius: 0 0 var(--border-radius) var(--border-radius);
+.design:last-child {
+    margin-bottom: calc(var(--section-padding) * 2);
 }
 
 a:link.logo, a:visited.logo {
@@ -254,7 +246,7 @@ input[type=submit]:active {
 }
 
 .container-column-half {
-    max-width: calc(50% - 5px);
+    /*max-width: calc(50% - 5px);*/
     /* … */
 }
 
@@ -285,6 +277,7 @@ input[type=submit]:active {
 .full {
     box-sizing: border-box;
     width: 100%;
+    /* … */
 }
 
 .no-margin {
