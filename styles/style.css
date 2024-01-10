@@ -89,7 +89,7 @@ header {
 
 footer {
     background-color: var(--clr-secondary);
-    box-shadow: 0 0 0.3em 0.1em var(--clr-secondary);
+    box-shadow: 0 0 3px 1px var(--clr-secondary);
     box-sizing: border-box;
     margin-top: auto;
     padding: 1em calc(max((100% - var(--mn-mx-width)) / 2, var(--mn-padding)) + var(--section-padding));
@@ -109,7 +109,7 @@ section {
     flex-direction: column;
     background-color: var(--clr-primary-dk);
     border-radius: var(--border-radius);
-    box-shadow: 0 0 0.3em 0.1em var(--clr-primary-dk);
+    box-shadow: 0 0 3px 1px var(--clr-primary-dk);
     position: relative;
     margin: 2em 0 0;
     scroll-margin-top: 4em;
@@ -131,13 +131,13 @@ article {
     background-color: var(--clr-primary);
     padding: var(--section-padding);
     position: relative;
-    box-shadow: 0 0 0.3em 0.1em var(--clr-primary);
+    box-shadow: 0 0 3px 1px var(--clr-primary);
     border-radius: var(--border-radius);
-    margin: var(--section-padding);
+    margin-bottom: var(--section-padding);
 }
 
-article:last-child {
-    margin-bottom: calc(var(--section-padding) * 2);
+article:first-child {
+    margin-top: calc(var(--section-padding));
 }
 
 a:link.logo, a:visited.logo {
@@ -149,7 +149,7 @@ a:link.logo, a:visited.logo {
 h1 {
     background-color: var(--clr-primary);
     border-radius: var(--border-radius) var(--border-radius) 0 0;
-    box-shadow: 0 0 0.3em 0.1em var(--clr-primary);
+    box-shadow: 0 0 3px 1px var(--clr-primary);
     box-sizing: border-box;
     margin: 0 0 var(--section-padding) 0;
     padding: var(--section-padding);
