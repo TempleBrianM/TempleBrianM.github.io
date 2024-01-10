@@ -97,8 +97,19 @@ footer {
     background-color: var(--clr-secondary);
     box-shadow: 0 0 3px 1px var(--clr-secondary);
     box-sizing: border-box;
-    margin-top: auto;
+    display:flex;
+    justify-content: center;
     padding: 1em calc(max((100% - var(--mn-mx-width)) / 2, var(--mn-padding)) + var(--section-padding));
+    /* … */
+}
+
+footer > :first-child {
+    margin-top: 0;
+    /* … */
+}
+
+footer > :last-child {
+    margin-bottom: 0;
     /* … */
 }
 
@@ -116,7 +127,7 @@ section {
     box-shadow: 0 0 3px 1px var(--clr-primary-dk);
     display: flex;
     flex-direction: column;
-    margin: 2em 0 0;
+    margin: 2em 0;
     position: relative;
     scroll-margin-top: 4em;
     /* … */
@@ -124,12 +135,6 @@ section {
 
 /* TODO Make this value same as scroll-margin-top */
 section:first-child {
-    margin-top: 0.5em;
-    /* … */
-}
-
-section:last-child {
-    margin-bottom: 3em;
     /* … */
 }
 
@@ -162,12 +167,12 @@ article > :last-child {
     /* … */
 }
 
-article > * > *:first-child {
+article > * > :first-child {
     margin-top:0;
     /* … */
 }
 
-article > * > *:last-child {
+article > * > :last-child {
     margin-bottom: 0;
     /* … */
 }
@@ -187,12 +192,6 @@ h1 {
     padding: var(--section-padding);
     position: relative;
     width: 100%;
-}
-
-h4.credits {
-    text-align: center;
-    margin: 0;
-    /* … */
 }
 
 input[type=text],
