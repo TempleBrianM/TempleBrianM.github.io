@@ -55,6 +55,11 @@
     /* … */
 }
 
+* {/*
+    border: 1px solid var(--clr-accent);
+    /* … */
+}
+
 /* || GENERAL STYLES */
 
 html {
@@ -128,16 +133,19 @@ section:last-child {
 }
 
 article {
+    align-items: center;
     background-color: var(--clr-primary);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 3px 1px var(--clr-primary);
+    display: flex;
+    justify-content: center;
+    margin: 0 var(--section-padding) var(--section-padding);
     padding: var(--section-padding);
     position: relative;
-    box-shadow: 0 0 3px 1px var(--clr-primary);
-    border-radius: var(--border-radius);
-    margin-bottom: var(--section-padding);
 }
 
-article:first-child {
-    margin-top: calc(var(--section-padding));
+article :last-child {
+    margin-bottom: 0;
 }
 
 a:link.logo, a:visited.logo {
