@@ -127,7 +127,7 @@ section:last-child {
     /* … */
 }
 
-.design {
+article {
     background-color: var(--clr-primary);
     padding: var(--section-padding);
     position: relative;
@@ -136,7 +136,7 @@ section:last-child {
     margin: var(--section-padding);
 }
 
-.design:last-child {
+article:last-child {
     margin-bottom: calc(var(--section-padding) * 2);
 }
 
