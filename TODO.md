@@ -6,3 +6,4 @@
 - [ ] Implement contact back-end
 - [ ] Scroll to height fix
 - [ ] Footer not at bottom fix
+- [ ] Contact section emojis
