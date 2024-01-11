@@ -133,11 +133,6 @@ section {
     /* … */
 }
 
-/* TODO Make this value same as scroll-margin-top */
-section:first-child {
-    /* … */
-}
-
 article {
     align-items: center;
     background-color: var(--clr-primary);
