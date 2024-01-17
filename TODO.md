@@ -1,6 +1,5 @@
 # TODO
 
-- [ ] Upload properly colored crt monitor overlay
-- [ ] TODO typing sound effect (and monitor turn on?)
+- [ ] Colors
 - [ ] Format for phone
 - [ ] Contact section emojis
