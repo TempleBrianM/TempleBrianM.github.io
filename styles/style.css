@@ -20,6 +20,7 @@
     --clr-accent-lt:            hsl(205, 100%, 60%);
     --clr-accent-dk:            hsl(205, 100%, 37%);
 
+    --font-size:                1.2em;
     --mn-mx-width:              1100px;
     --mn-padding:               1vw;
     --section-padding:          10px;
@@ -52,8 +53,103 @@
 
         --crt-s:                    1.5;
         --crt-b:                    0.15;
+        /* … */
     }
     /* … */
+}
+
+@media screen and (max-width: 1100px) {
+
+    :root {
+        --mn-padding:               4vw;
+        --section-margin:           8em;
+        --font-size:                1.7em;
+        /* … */
+    }
+
+    header {
+        align-items: center;
+        flex-direction: column;
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
+        /* … */
+    }
+
+    section:first-child {
+        margin-top: 1%;
+        /* … */
+    }
+
+    #projects > article, #projects > article:nth-child(odd) {
+        flex-direction: column;
+        /* … */
+    }
+
+    #projects > article {
+        text-align: center;
+        /* … */
+    }
+
+    #projects > article > * > :first-child {
+        margin-top: revert;
+        /* … */
+    }
+
+    #projects > article > * > :last-child {
+        margin-bottom: revert;
+        /* … */
+    }
+
+    article > * {
+        max-width: revert;
+        /* … */
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    :root {
+        --mn-padding:               4vw;
+        --section-margin:           8em;
+        --font-size:                1.7em;
+    }
+
+    header {
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
+        flex-direction: column;
+        /* … */
+    }
+
+    #projects > article, #projects > article:nth-child(odd) {
+        flex-direction: column;
+        /* … */
+    }
+
+    #projects > article {
+        text-align: center;
+        /* … */
+    }
+
+    #projects > article > * > :first-child {
+        margin-top: revert;
+        /* … */
+    }
+
+    #projects > article > * > :last-child {
+        margin-bottom: revert;
+        /* … */
+    }
+
+    article > * {
+        revert;
+        /* … */
+    }
+
+    nav.top-nav {
+        display:none;
+        /* … */
+    }
 }
 
 * {
@@ -72,7 +168,7 @@ html {
 body {
     background-color: var(--clr-neutral);
     color: var(--clr-dark-neutral);
-    font: 1.2em monospace;
+    font: var(--font-size) monospace;
     margin: 0;
     min-height: 100vh;
     width: 100%;
@@ -374,82 +470,4 @@ nav.top-nav a:active {
     0% { max-width: 0; }
     100% { max-width: 100%; }
     /* … */
-}
-
-@media screen and (max-width: 1100px) {
-
-    header {
-        padding-top: 0.5%;
-        padding-bottom: 0.5%;
-        /* … */
-    }
-
-    section:first-child {
-        margin-top: 1%;
-        /* … */
-    }
-
-    #projects > article, #projects > article:nth-child(odd) {
-        flex-direction: column;
-        /* … */
-    }
-
-    #projects > article {
-        text-align: center;
-        /* … */
-    }
-
-    #projects > article > * > :first-child {
-        margin-top: revert;
-        /* … */
-    }
-
-    #projects > article > * > :last-child {
-        margin-bottom: revert;
-        /* … */
-    }
-
-    article > * {
-        max-width: revert;
-        /* … */
-    }
-}
-
-@media screen and (max-width: 800px) {
-
-    header {
-        padding-top: 0.5%;
-        padding-bottom: 0.5%;
-    }
-        /* … */
-
-    #projects > article, #projects > article:nth-child(odd) {
-        flex-direction: column;
-        /* … */
-    }
-
-    #projects > article {
-        text-align: center;
-        /* … */
-    }
-
-    #projects > article > * > :first-child {
-        margin-top: revert;
-        /* … */
-    }
-
-    #projects > article > * > :last-child {
-        margin-bottom: revert;
-        /* … */
-    }
-
-    article > * {
-        revert;
-        /* … */
-    }
-
-    nav.top-nav {
-        display:none;
-        /* … */
-    }
 }
