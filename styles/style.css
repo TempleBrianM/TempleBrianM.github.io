@@ -144,7 +144,6 @@ article {
     flex-direction: row;
     justify-content: center;
     margin: 0 var(--section-padding) var(--section-padding);
-    padding: var(--section-padding);
     position: relative;
     /* … */
 }
@@ -154,18 +153,8 @@ article:nth-child(odd) {
 }
 
 article > * {
-    margin: 0 calc(var(--section-padding) / 2);
+    margin: var(--section-padding);
     max-width: calc((min(var(--mn-mx-width), 100vw - var(--scrollbar-width) - 2 * var(--mn-padding)) - 5 * var(--section-padding)) / 2);
-    /* … */
-}
-
-article > :first-child {
-    margin-left: 0;
-    /* … */
-}
-
-article > :last-child {
-    margin-right: 0;
     /* … */
 }
 
@@ -393,74 +382,16 @@ nav.top-nav a:active {
         /* … */
     }
 
-    #projects > article, #projects > article:nth-child(odd) {
-        flex-direction: column;
-        /* … */
-    }
 
-    #projects > article {
-        text-align: center;
-        /* … */
-    }
-
-    #projects > article > * > :first-child {
-        margin-top: revert;
-        /* … */
-    }
-
-    #projects > article > * > :last-child {
-        margin-bottom: revert;
-        /* … */
-    }
-
-    article > * {
-        max-width: revert;
-        /* … */
-    }
-}
-
-@media screen and (max-width: 800px) {
-
-    :root {
-        --mn-padding:               4vw;
-        --section-margin:           4em;
-        --font-size:                1.7em;
-    }
-
-    header {
-        padding-top: 0.5%;
-        padding-bottom: 0.5%;
-        flex-direction: column;
-        /* … */
-    }
-
-    #projects > article, #projects > article:nth-child(odd) {
-        flex-direction: column;
-        /* … */
-    }
-
-    #projects > article {
-        text-align: center;
-        /* … */
-    }
-
-    #projects > article > * > :first-child {
-        margin-top: revert;
-        /* … */
-    }
-
-    #projects > article > * > :last-child {
-        margin-bottom: revert;
-        /* … */
-    }
-
-    article > * {
-        revert;
-        /* … */
-    }
 
     nav.top-nav {
-        display:none;
+        width: 100%;
+        justify-content: space-around;
+        /* … */
+    }
+
+    nav.top-nav a{
+        margin-right: 0;
         /* … */
     }
 }
