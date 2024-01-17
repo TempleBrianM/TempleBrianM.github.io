@@ -139,11 +139,16 @@ article {
     border-radius: var(--border-radius);
     box-shadow: 0 0 3px 1px var(--clr-primary);
     display: flex;
+    flex-direction: row;
     justify-content: center;
     margin: 0 var(--section-padding) var(--section-padding);
     padding: var(--section-padding);
     position: relative;
     /* … */
+}
+
+article:nth-child(odd) {
+    flex-direction: row-reverse;
 }
 
 article > * {
@@ -371,21 +376,43 @@ nav.top-nav a:active {
     /* … */
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1100px) {
 
     header {
         padding-top: 0.5%;
         padding-bottom: 0.5%;
+        /* … */
     }
 
     section:first-child {
         margin-top: 1%;
+        /* … */
     }
 
-    h3.typing {
-        font-size: 0.8em;
+    #projects > article, #projects > article:nth-child(odd) {
+        flex-direction: column;
+        /* … */
     }
-    /* … */
+
+    #projects > article {
+        text-align: center;
+        /* … */
+    }
+
+    #projects > article > * > :first-child {
+        margin-top: revert;
+        /* … */
+    }
+
+    #projects > article > * > :last-child {
+        margin-bottom: revert;
+        /* … */
+    }
+
+    article > * {
+        max-width: revert;
+        /* … */
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -394,22 +421,35 @@ nav.top-nav a:active {
         padding-top: 0.5%;
         padding-bottom: 0.5%;
     }
+        /* … */
 
-    section:first-child {
-        margin-top: 1%;
+    #projects > article, #projects > article:nth-child(odd) {
+        flex-direction: column;
+        /* … */
     }
 
-    section#contact {
-        display: revert;
-        justify-content: revert;
+    #projects > article {
+        text-align: center;
+        /* … */
+    }
+
+    #projects > article > * > :first-child {
+        margin-top: revert;
+        /* … */
+    }
+
+    #projects > article > * > :last-child {
+        margin-bottom: revert;
+        /* … */
+    }
+
+    article > * {
+        revert;
+        /* … */
     }
 
     nav.top-nav {
         display:none;
+        /* … */
     }
-
-    .container {
-        width: 100%;
-    }
-    /* … */
 }
