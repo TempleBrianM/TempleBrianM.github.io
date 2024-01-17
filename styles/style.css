@@ -169,8 +169,8 @@ article > * > :last-child {
 }
 
 a:link.logo, a:visited.logo {
-    text-decoration: none;
     color:var(--clr-dark-neutral);
+    text-decoration: none;
     /* … */
 }
 
@@ -193,8 +193,8 @@ textarea {
     border: 1px solid var(--clr-dark-neutral);
     border-radius: var(--border-radius);
     box-sizing: border-box;
-    margin-top: 0.45em;
     margin-bottom: 1.2em;
+    margin-top: 0.45em;
     padding: 0.9em;
     resize: vertical;
     width: 100%;
@@ -230,12 +230,12 @@ input[type=submit]:active {
 .crt-monitor-overlay {
     aspect-ratio: 2.4;
     border-radius: var(--border-radius);
-    z-index: 2;
     filter: hue-rotate(var(--crt-hr))
             saturate(var(--crt-s))
             brightness(var(--crt-b))
             grayscale(var(--crt-gs));
     width: 100%;
+    z-index: 2;
     /* … */
 }
 
@@ -256,11 +256,11 @@ input[type=submit]:active {
     align-items: center;
     color: var(--clr-accent);
     border-radius: var(--border-radius);
-    display: flex;
     box-sizing: border-box;
-    padding: 4% 10% 5%;
+    display: flex;
     height: 100%;
     justify-content: center;
+    padding: 4% 10% 5%;
     position: absolute;
     width: 100%;
     /* … */
@@ -294,11 +294,11 @@ nav.top-nav {
 }
 
 nav.top-nav a{
+    border-radius: calc(var(--border-radius) * 4);
     font-size: 1.25em;
     font-weight: bolder;
     margin-right: 2ch;
     padding: 0.1em 0.1em 0.4em;
-    border-radius: calc(var(--border-radius) * 4);
     /* … */
 }
 
@@ -328,8 +328,6 @@ nav.top-nav a:active {
     /* … */
 }
 
-/* || ANIMATION */
-
 .typing {
     animation:
         type calc(var(--char) * var(--second-per-char)) steps(var(--char), end) backwards,
@@ -337,10 +335,10 @@ nav.top-nav a:active {
         blinking 1s step-end calc(var(--char) * var(--second-per-char)) var(--num-blink);
     animation-delay: calc(var(--delay-char) * var(--second-per-char));
     border-right: .15em solid transparent;
-    font-size: min(2.3vw, 28px);
+    font-size: min(2.3vw, 22px);
     overflow: hidden;
-    white-space: pre;
     margin: 0;
+    white-space: pre;
     /* … */
 }
 
@@ -350,6 +348,8 @@ nav.top-nav a:active {
     flex-direction: column;
     /* … */
 }
+
+/* || ANIMATION */
 
 @keyframes blinking {
     0%, 100% { border-color: transparent; }
@@ -380,16 +380,14 @@ nav.top-nav a:active {
     header {
         align-items: center;
         flex-direction: column;
-        padding-top: 0.5%;
         padding-bottom: 0.5%;
+        padding-top: 0.5%;
         /* … */
     }
 
-
-
     nav.top-nav {
-        width: 100%;
         justify-content: space-around;
+        width: 100%;
         /* … */
     }
 
