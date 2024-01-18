@@ -5,5 +5,5 @@
   - Font Sizes
   - Article Borders
 - Contact section emojis
-- Separate entangled variables
+- Fancify box shadows
 - Fix spacing

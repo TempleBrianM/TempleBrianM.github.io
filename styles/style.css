@@ -29,8 +29,9 @@
     
     /* Box Model Spacing */
     --bm-main-p:                1vw;
-    --bm-section-p:             10px;
     --bm-section-m:             2em;
+    --bm-section-p:             10px;
+    --bm-article-m:             2em;
     
     /* Utility */
     --border-radius:            0.5em;
@@ -157,7 +158,7 @@ article {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: var(--bm-section-m) 0;
+    margin: var(--bm-article-m) 0;
     position: relative;
     /* … */
 }
@@ -185,7 +186,7 @@ h1 {
     box-shadow: 0 0 3px 1px var(--clr-primary);
     box-sizing: border-box;
     margin: 0;
-    padding: calc(2 * var(--bm-section-p)) var(--bm-section-p);
+    padding: 0.83em var(--bm-section-p);
     position: relative;
     width: 100%;
 }
@@ -255,6 +256,41 @@ input[type=reset]:active {
     /* … */
 }
 
+.crt-container {
+    align-items: center;
+    color: var(--clr-accent);
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    padding: 6% 12% 7%;
+    position: absolute;
+    width: 100%;
+    /* … */
+}
+
+.crt-typing-container {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    /* … */
+}
+
+.crt-typing {
+    animation:
+        type calc(var(--char) * var(--time-per-char)) steps(var(--char), end) backwards,
+        cursor calc(var(--char) * var(--time-per-char)) steps(var(--char), end),
+        blinking 1s step-end calc(var(--char) * var(--time-per-char)) var(--num-blink);
+    animation-delay: calc(var(--delay-char) * var(--time-per-char));
+    border-right: .15em solid transparent;
+    font-size: min(2vw, 1.5em);
+    overflow: hidden;
+    margin: 0;
+    white-space: pre;
+    /* … */
+}
+
 .crt-monitor-overlay {
     aspect-ratio: 2.4;
     border-radius: var(--border-radius);
@@ -286,41 +322,6 @@ input[type=reset]:active {
 
 .accent {
     color: var(--clr-accent);
-    /* … */
-}
-
-.container-crt {
-    align-items: center;
-    color: var(--clr-accent);
-    border-radius: var(--border-radius);
-    box-sizing: border-box;
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    padding: 6% 12% 7%;
-    position: absolute;
-    width: 100%;
-    /* … */
-}
-
-.container-crt-typing {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    /* … */
-}
-
-.crt-typing {
-    animation:
-        type calc(var(--char) * var(--time-per-char)) steps(var(--char), end) backwards,
-        cursor calc(var(--char) * var(--time-per-char)) steps(var(--char), end),
-        blinking 1s step-end calc(var(--char) * var(--time-per-char)) var(--num-blink);
-    animation-delay: calc(var(--delay-char) * var(--time-per-char));
-    border-right: .15em solid transparent;
-    font-size: min(2vw, 1.5em);
-    overflow: hidden;
-    margin: 0;
-    white-space: pre;
     /* … */
 }
 
@@ -408,9 +409,9 @@ nav.top-nav a:active {
 @media screen and (max-width: 1100px) {
 
     :root {
-        --bm-main-p:               4vw;
-        --bm-section-m:           4em;
-        --fs-base:                1.7em;
+        --bm-main-p:                4vw;
+        --bm-section-m:             4em;
+        --fs-base:                  1.7em;
         /* … */
     }
 
