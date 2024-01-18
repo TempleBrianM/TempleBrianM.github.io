@@ -152,8 +152,9 @@ article:nth-child(odd) {
 }
 
 article > * {
+    box-sizing: border-box;
     margin: 0 var(--section-padding);
-    max-width: calc((min(var(--mn-mx-width), 100vw - var(--scrollbar-width) - 2 * var(--mn-padding)) - 5 * var(--section-padding)) / 2);
+    max-width: 50%;
     /* … */
 }
 
