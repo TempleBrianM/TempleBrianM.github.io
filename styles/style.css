@@ -19,7 +19,9 @@
 
     --clr-accent:               hsl(205, 100%, 50%);
     --clr-accent-lt:            hsl(205, 100%, 60%);
+    --clr-accent-ltr:            hsl(205, 100%, 70%);
     --clr-accent-dk:            hsl(205, 100%, 37%);
+    --clr-accent-dkr:            hsl(205, 100%, 24%);
 
     --font-size:                1.2em;
     --mn-mx-width:              1100px;
@@ -176,7 +178,7 @@ input[type=text],
 input[type=email],
 select,
 textarea {
-    background: var(--clr-primary);
+    background: var(--clr-primary-dk);
     border: 1px solid var(--clr-dark-neutral);
     border-radius: var(--border-radius);
     box-sizing: border-box;
@@ -189,10 +191,10 @@ textarea {
 }
 
 input[type=submit] {
-    background: var(--clr-primary);
-    border: 1px solid var(--clr-dark-neutral);
-    border-radius: var(--border-radius);
-    color: var(--clr-dark-neutral);
+    background: var(--clr-accent);
+    border: none;
+    border-radius: calc(3 * var(--font-size));
+    color: var(--clr-primary-dk);
     cursor: pointer;
     font-weight: bold;
     padding: 1em 2ch;
@@ -200,10 +202,33 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
+    background-color: var(--clr-accent-lt);
     /* … */
 }
 
 input[type=submit]:active {
+    background-color: var(--clr-accent-ltr);
+    /* … */
+}
+
+input[type=reset] {
+    background: var(--clr-primary-drk);
+    border: none;
+    border-radius: calc(3 * var(--font-size));
+    color: var(--clr-dark-neutral);
+    cursor: pointer;
+    font-weight: bold;
+    padding: 1em 2ch;
+    /* … */
+}
+
+input[type=reset]:hover {
+    background-color: var(--clr-mask-dk);
+    /* … */
+}
+
+input[type=reset]:active {
+    background-color: var(--clr-mask-dkr);
     /* … */
 }
 
@@ -226,10 +251,19 @@ input[type=submit]:active {
     /* … */
 }
 
+.form-buttons {
+    float: right;
+}
+
 .project-preview {
     height: 20em;
     object-fit: contain;
     /* … */
+}
+
+::placeholder {
+  color: var(--clr-dark-neutral);
+  opacity: 0.35;
 }
 
 /* || UTILITIES */
