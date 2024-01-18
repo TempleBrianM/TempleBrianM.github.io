@@ -7,3 +7,5 @@
 - Contact section emojis
 - Fancify box shadows
 - Fix spacing
+- Hardcode all images?
+- Hardcode proofread sitewide section
