@@ -1,6 +1,7 @@
 :root {
     color-scheme: light;
 
+    /* Colors */
     --clr-neutral:              hsl(205, 10%, 95%);
 
     --clr-dark-neutral:         hsl(205, 10%, 10%);
@@ -19,17 +20,28 @@
 
     --clr-accent:               hsl(205, 100%, 50%);
     --clr-accent-lt:            hsl(205, 100%, 60%);
-    --clr-accent-ltr:            hsl(205, 100%, 70%);
+    --clr-accent-ltr:           hsl(205, 100%, 70%);
     --clr-accent-dk:            hsl(205, 100%, 37%);
-    --clr-accent-dkr:            hsl(205, 100%, 24%);
+    --clr-accent-dkr:           hsl(205, 100%, 24%);
 
-    --font-size:                1.2em;
-    --mn-mx-width:              1100px;
-    --mn-padding:               1vw;
-    --section-padding:          10px;
-    --section-margin:           2em;
+    /* Fonts */
+    --fs-base:                  1.2em;
+    
+    /* Box Model Spacing */
+    --bm-main-p:                1vw;
+    --bm-section-p:             10px;
+    --bm-section-m:             2em;
+    
+    /* Utility */
     --border-radius:            0.5em;
-    --second-per-char:          10ms;
+
+    /* Page */
+    --main-mx-width:            1100px;
+    
+    /* Typing Effect */
+    --time-per-char:            10ms;
+
+    /* Filter */
     --crt-hr:                   150deg;
     --crt-s:                    0;
     --crt-b:                    1;
@@ -41,6 +53,7 @@
     :root {
         color-scheme: dark;
 
+        /* Colors */
         --clr-neutral:              hsl(205, 10%, 10%);
 
         --clr-dark-neutral:         hsl(205, 10%, 89%);
@@ -71,7 +84,7 @@ html {
 body {
     background-color: var(--clr-neutral);
     color: var(--clr-dark-neutral);
-    font: var(--font-size) monospace;
+    font: var(--fs-base) monospace;
     margin: 0;
     min-height: 100vh;
     width: 100%;
@@ -85,7 +98,7 @@ header {
     box-sizing: border-box;
     display:flex;
     justify-content: space-between;
-    padding: 1em calc(max((100% - var(--mn-mx-width)) / 2, var(--mn-padding)) + var(--section-padding));
+    padding: 1em calc(max((100% - var(--main-mx-width)) / 2, var(--bm-main-p)) + var(--bm-section-p));
     position: sticky;
     top: 0;
     width: 100%;
@@ -99,7 +112,7 @@ footer {
     box-sizing: border-box;
     display:flex;
     justify-content: center;
-    padding: 1em calc(max((100% - var(--mn-mx-width)) / 2, var(--mn-padding)) + var(--section-padding));
+    padding: 1em calc(max((100% - var(--main-mx-width)) / 2, var(--bm-main-p)) + var(--bm-section-p));
     /* … */
 }
 
@@ -115,8 +128,8 @@ footer > :last-child {
 
 main {
     margin: 0 auto;
-    max-width: var(--mn-mx-width);
-    padding: 0 var(--mn-padding);
+    max-width: var(--main-mx-width);
+    padding: 0 var(--bm-main-p);
     /* … */
 }
 
@@ -127,7 +140,7 @@ section {
     box-shadow: 0 0 3px 1px var(--clr-primary-dk);
     display: flex;
     flex-direction: column;
-    margin: var(--section-margin) 0;
+    margin: var(--bm-section-m) 0;
     position: relative;
     /* … */
 }
@@ -142,7 +155,7 @@ article {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: var(--section-margin) 0;
+    margin: var(--bm-section-m) 0;
     position: relative;
     /* … */
 }
@@ -153,7 +166,7 @@ article:nth-child(odd) {
 
 article > * {
     box-sizing: border-box;
-    margin: 0 var(--section-padding);
+    margin: 0 var(--bm-section-p);
     max-width: 50%;
     /* … */
 }
@@ -170,7 +183,7 @@ h1 {
     box-shadow: 0 0 3px 1px var(--clr-primary);
     box-sizing: border-box;
     margin: 0;
-    padding: calc(2 * var(--section-padding)) var(--section-padding);
+    padding: calc(2 * var(--bm-section-p)) var(--bm-section-p);
     position: relative;
     width: 100%;
 }
@@ -194,7 +207,7 @@ textarea {
 input[type=submit] {
     background: var(--clr-accent);
     border: none;
-    border-radius: calc(3 * var(--font-size));
+    border-radius: calc(3 * var(--fs-base));
     color: var(--clr-primary-dk);
     cursor: pointer;
     font-weight: bold;
@@ -215,7 +228,7 @@ input[type=submit]:active {
 input[type=reset] {
     background: var(--clr-primary-drk);
     border: none;
-    border-radius: calc(3 * var(--font-size));
+    border-radius: calc(3 * var(--fs-base));
     color: var(--clr-dark-neutral);
     cursor: pointer;
     font-weight: bold;
@@ -297,10 +310,10 @@ input[type=reset]:active {
 
 .crt-typing {
     animation:
-        type calc(var(--char) * var(--second-per-char)) steps(var(--char), end) backwards,
-        cursor calc(var(--char) * var(--second-per-char)) steps(var(--char), end),
-        blinking 1s step-end calc(var(--char) * var(--second-per-char)) var(--num-blink);
-    animation-delay: calc(var(--delay-char) * var(--second-per-char));
+        type calc(var(--char) * var(--time-per-char)) steps(var(--char), end) backwards,
+        cursor calc(var(--char) * var(--time-per-char)) steps(var(--char), end),
+        blinking 1s step-end calc(var(--char) * var(--time-per-char)) var(--num-blink);
+    animation-delay: calc(var(--delay-char) * var(--time-per-char));
     border-right: .15em solid transparent;
     font-size: min(2vw, 1.5em);
     overflow: hidden;
@@ -393,9 +406,9 @@ nav.top-nav a:active {
 @media screen and (max-width: 1100px) {
 
     :root {
-        --mn-padding:               4vw;
-        --section-margin:           4em;
-        --font-size:                1.7em;
+        --bm-main-p:               4vw;
+        --bm-section-m:           4em;
+        --fs-base:                1.7em;
         /* … */
     }
 
