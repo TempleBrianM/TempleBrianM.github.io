@@ -41,7 +41,7 @@
     /* Typing Effect */
     --time-per-char:            10ms;
 
-    /* Filter */
+    /* Image Filter */
     --crt-hr:                   150deg;
     --crt-s:                    0;
     --crt-b:                    1;
@@ -67,6 +67,8 @@
 
         --clr-mask-dk:              hsla(0, 0%, 100%, 0.1);
         --clr-mask-dkr:             hsla(0, 0%, 100%, 0.2);
+
+        /* Image Filter */
         --crt-s:                    1.3;
         --crt-b:                    0.20;
         /* … */
