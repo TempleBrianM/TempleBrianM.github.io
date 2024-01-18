@@ -137,13 +137,10 @@ section {
 
 article {
     align-items: center;
-    background-color: var(--clr-primary);
-    border-radius: var(--border-radius);
-    box-shadow: 0 0 3px 1px var(--clr-primary);
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 0 var(--section-padding) var(--section-padding);
+    margin: var(--section-margin) 0;
     position: relative;
     /* … */
 }
@@ -153,18 +150,8 @@ article:nth-child(odd) {
 }
 
 article > * {
-    margin: var(--section-padding);
+    margin: 0 var(--section-padding);
     max-width: calc((min(var(--mn-mx-width), 100vw - var(--scrollbar-width) - 2 * var(--mn-padding)) - 5 * var(--section-padding)) / 2);
-    /* … */
-}
-
-article > * > :first-child {
-    margin-top:0;
-    /* … */
-}
-
-article > * > :last-child {
-    margin-bottom: 0;
     /* … */
 }
 
@@ -179,8 +166,8 @@ h1 {
     border-radius: var(--border-radius) var(--border-radius) 0 0;
     box-shadow: 0 0 3px 1px var(--clr-primary);
     box-sizing: border-box;
-    margin: 0 0 var(--section-padding) 0;
-    padding: var(--section-padding);
+    margin: 0;
+    padding: calc(2 * var(--section-padding)) var(--section-padding);
     position: relative;
     width: 100%;
 }
