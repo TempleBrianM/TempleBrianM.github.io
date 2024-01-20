@@ -26,6 +26,8 @@
 
     /* Fonts */
     --fs-base:                  1.2em;
+    --fs-logo:                  1.5em;
+    --fs-top-nav:               1.25em;
     
     /* Box Model Spacing */
     --bm-main-p:                1vw;
@@ -101,12 +103,16 @@ header {
     box-sizing: border-box;
     display:flex;
     justify-content: space-between;
-    padding: 0 calc(max((100% - var(--main-mx-width)) / 2, var(--bm-main-p)) + var(--bm-section-p));
+    padding: 0 calc(max((100% - var(--main-mx-width)) / 2, var(--bm-main-p)));
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 997;
     /* … */
+}
+
+header > * {
+    margin-right: var(--bm-section-p);
 }
 
 footer {
@@ -320,39 +326,38 @@ input[type=reset]:active {
 .logo {
     align-items: center;
     display:flex;
-    font-size: 1.5em;
+    font-size: var(--fs-logo);
     font-weight: bolder;
     /* … */
 }
 
+.logo > * {
+    margin-left:var(--bm-section-p);
+}
+
 .logo-icon {
     height: 0.9em;
-    transition: 0.2s;
     /* … */
 }
 
 .logo-wordmark {
-    margin: 0.5em 0 0.5em 1ch;
+   white-space: nowrap;
     /* … */
 }
 
 nav.top-nav {
     align-items: center;
     display:flex;
+    justify-content: space-around;
+    width: 100%;
     /* … */
 }
 
 nav.top-nav a{
     border-radius: calc(4 * var(--border-radius));
-    font-size: 1.25em;
+    font-size: var(--fs-top-nav);
     font-weight: bolder;
-    margin-right: 2ch;
     padding: 0.1em 0.1em 0.4em;
-    /* … */
-}
-
-nav.top-nav a:last-child{
-    margin-right: 0;
     /* … */
 }
 
