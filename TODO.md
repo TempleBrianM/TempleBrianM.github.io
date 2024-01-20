@@ -5,6 +5,5 @@
   - Font Sizes
   - Article Borders
 - Contact section emojis
-- Fancify box shadows
 - Fix spacing
 - Hardcode all images?

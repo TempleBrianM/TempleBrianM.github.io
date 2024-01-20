@@ -17,6 +17,7 @@
 
     --clr-mask-dk:              hsla(0, 0%, 0%, 0.1);
     --clr-mask-dkr:             hsla(0, 0%, 0%, 0.2);
+    --clr-box-shadow:           hsla(0, 0%, 0%, 0.16);
 
     --clr-accent:               hsl(205, 100%, 50%);
     --clr-accent-lt:            hsl(205, 100%, 60%);
@@ -36,7 +37,7 @@
     --bm-article-m:             2em;
     
     /* Utility */
-    --border-radius:            0.5em;
+    --border-radius:            10px;
 
     /* Page */
     --main-mx-width:            1100px;
@@ -52,7 +53,7 @@
     /* … */
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
     :root {
         color-scheme: dark;
 
@@ -99,7 +100,7 @@ body {
 header {
     backdrop-filter: blur(0.2em);
     background-color: var(--clr-secondary-tl);
-    box-shadow: 0 0 0.3em 0.1em var(--clr-secondary-tl);
+    box-shadow: 0 0 10px var(--clr-box-shadow);
     box-sizing: border-box;
     display:flex;
     justify-content: space-between;
@@ -117,7 +118,7 @@ header > * {
 
 footer {
     background-color: var(--clr-secondary);
-    box-shadow: 0 0 3px 1px var(--clr-secondary);
+    box-shadow: 0 0 10px var(--clr-box-shadow);
     box-sizing: border-box;
     display:flex;
     justify-content: center;
@@ -136,7 +137,7 @@ section {
     align-items: center;
     background-color: var(--clr-primary-dk);
     border-radius: var(--border-radius);
-    box-shadow: 0 0 3px 1px var(--clr-primary-dk);
+    box-shadow: 0 10px 20px var(--clr-box-shadow), 0 6px 6px var(--clr-box-shadow);
     display: flex;
     flex-direction: column;
     margin: var(--bm-section-m) 0;
@@ -146,7 +147,6 @@ section {
 
 #index {
     background-color: var(--clr-primary-dk-crt);
-    box-shadow: 0 0 3px 1px var(--clr-primary);
 }
 
 article {
@@ -179,7 +179,7 @@ a:link.logo, a:visited.logo {
 h1 {
     background-color: var(--clr-primary);
     border-radius: var(--border-radius) var(--border-radius) 0 0;
-    box-shadow: 0 0 3px 1px var(--clr-primary);
+    box-shadow: 0 1px 2px var(--clr-box-shadow);
     box-sizing: border-box;
     margin: 0;
     padding: 0.83em var(--bm-section-p);

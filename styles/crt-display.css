@@ -141,6 +141,7 @@
   z-index: 2;
   pointer-events: none;
   animation: flicker 0.15s infinite;
+  border-radius: var(--border-radius);
 }
 .crt-effect::before {
   content: " ";
@@ -154,6 +155,7 @@
   z-index: 2;
   background-size: 100% 4px, 6px 100%;
   pointer-events: none;
+  border-radius: var(--border-radius);
 }
 .crt-effect {
   animation: textShadow 1.6s infinite;
