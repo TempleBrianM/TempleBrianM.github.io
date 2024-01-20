@@ -257,6 +257,16 @@ input[type=reset]:active {
     /* … */
 }
 
+.contact-link-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-link-image {
+    height: 25px;
+    width: 25px;
+}
+
 .crt-container {
     align-items: center;
     color: var(--clr-accent);
