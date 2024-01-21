@@ -279,6 +279,7 @@ input[type=reset]:active {
 }
 
 .contact-link-image {
+    filter: invert(44%) sepia(67%) saturate(3505%) hue-rotate(183deg) brightness(100%) contrast(105%);
     height: 25px;
     width: 25px;
 }
