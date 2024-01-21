@@ -61,6 +61,8 @@
         --clr-neutral:              hsl(205, 10%, 10%);
 
         --clr-dark-neutral:         hsl(205, 10%, 89%);
+        --clr-dark-neutral-lt:      hsl(205, 10%, 75%);
+        --clr-dark-neutral-ltr:     hsl(205, 10%, 60%);
 
         --clr-primary:              hsl(205, 10%, 20%);
         --clr-primary-dk:           hsl(205, 10%, 25%);
@@ -257,9 +259,23 @@ input[type=reset]:active {
     /* … */
 }
 
-.contact-link-container {
-    display: flex;
-    flex-direction: column;
+.contact-link {
+    align-items: center;
+    color: var(--clr-dark-neutral);
+    display:flex;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    color: var(--clr-dark-neutral-lt);
+}
+
+.contact-link:active {
+    color: var(--clr-dark-neutral-ltr);
+}
+
+.contact-link > * {
+    margin-right:var(--bm-section-p);
 }
 
 .contact-link-image {
