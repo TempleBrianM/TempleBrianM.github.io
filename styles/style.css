@@ -181,7 +181,7 @@ a:link.logo, a:visited.logo {
 h1 {
     background-color: var(--clr-primary);
     border-radius: var(--border-radius) var(--border-radius) 0 0;
-    box-shadow: 0 1px 2px var(--clr-box-shadow);
+    box-shadow: 0 10px 20px var(--clr-box-shadow), 0 6px 6px var(--clr-box-shadow);
     box-sizing: border-box;
     margin: 0;
     padding: 0.83em var(--bm-section-p);
