@@ -27,6 +27,7 @@
 
     /* Fonts */
     --fs-base:                  1.2em;
+    --fs-input:                 1em;
     --fs-logo:                  1.5em;
     --fs-top-nav:               1.25em;
     /* … */
@@ -212,6 +213,7 @@ input[type=text],
 input[type=email],
 select,
 textarea {
+    font-size: var(--fs-input);
     background: var(--clr-primary-dk);
     border: 1px solid var(--clr-dark-neutral);
     border-radius: var(--border-radius);
