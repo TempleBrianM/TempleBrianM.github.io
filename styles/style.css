@@ -411,6 +411,11 @@ input[type=reset]:active {
 }
 
 .logo > * {
+    margin-left: 1ch;
+    /* … */
+}
+
+.logo > *:first-child {
     margin-left: var(--bm-section-p);
     /* … */
 }
