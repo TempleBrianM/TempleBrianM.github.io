@@ -484,6 +484,8 @@ nav.top-nav a:active {
     :root {
         /* Fonts */
         --fs-base:                  2em;
+        --fs-logo:                  2em;
+        --fs-top-nav:               1.20em;
         /* … */
 
         /* Box Model Spacing */
