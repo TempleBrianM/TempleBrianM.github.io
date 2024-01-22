@@ -300,7 +300,7 @@ input[type=reset]:active {
 }
 
 .contact-link > * {
-    margin-right:var(--bm-section-p);
+    margin-right: 1ch;
     /* … */
 }
 
