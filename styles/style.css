@@ -482,28 +482,44 @@ nav.top-nav a:active {
 @media screen and (max-width: 1100px) {
 
     :root {
-        --bm-main-p:                4vw;
-        --bm-section-m:             4em;
-        --fs-base:                  1.7em;
+        /* Fonts */
+        --fs-base:                  2em;
+        /* … */
+
+        /* Box Model Spacing */
+        --bm-main-p:                2vw;
+        /* … */
+
+        /* Utility */
+        --border-radius:            20px;
+        --horizontal-line-h:        2px;
         /* … */
     }
 
     header {
         align-items: center;
         flex-direction: column;
-        padding-bottom: 0.5%;
-        padding-top: 0.5%;
         /* … */
     }
 
-    nav.top-nav {
-        justify-content: space-around;
-        width: 100%;
-        /* … */
-    }
-
-    nav.top-nav a{
+    header > * {
         margin-right: 0;
-        /* … */
+    }
+
+    article {
+        flex-direction: column;
+    }
+
+    article > * {
+        max-width: 100%;
+    }
+
+    .brian-temple-headshot {
+        height: auto;
+        width: 50%;
+    }
+    .project-preview {
+        height: 40vh;
+        margin-top: calc(var(--bm-article-m) / 2);
     }
 }
