@@ -33,9 +33,9 @@
     
     /* Box Model Spacing */
     --bm-main-p:                1vw;
-    --bm-section-m:             2em;
-    --bm-section-p:             10px;
-    --bm-article-m:             2em;
+    --bm-section-m:             60px;
+    --bm-section-p:             50px;
+    --bm-article-m:             60px;
     /* … */
     
     /* Utility */
