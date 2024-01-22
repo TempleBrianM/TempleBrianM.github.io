@@ -263,7 +263,10 @@ input[type=reset]:active {
 }
 
 .brian-temple-headshot {
-    border-radius: 5% 30%;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 20px var(--clr-box-shadow), 0 6px 6px var(--clr-box-shadow);
+    box-sizing: border-box;
+    height: 200px;
     object-fit: cover;
     width: 200px;
     /* … */
@@ -358,6 +361,9 @@ input[type=reset]:active {
 }
 
 .project-preview {
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 20px var(--clr-box-shadow), 0 6px 6px var(--clr-box-shadow);
+    box-sizing: border-box;
     height: 20em;
     object-fit: contain;
     /* … */
@@ -370,7 +376,7 @@ input[type=reset]:active {
     /* … */
 }
 
-/* || SITEWIDE */
+/* || SITE-WIDE */
 
 .logo {
     align-items: center;

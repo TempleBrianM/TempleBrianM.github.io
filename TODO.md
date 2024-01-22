@@ -5,4 +5,3 @@
   - Font Sizes
   - Article Borders
 - Fix spacing
-- Hardcode all images?
