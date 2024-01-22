@@ -170,15 +170,15 @@ article {
     /* … */
 }
 
-article:nth-child(odd) {
-    flex-direction: row-reverse;
-}
-
 article > * {
     box-sizing: border-box;
     margin: 0 var(--bm-section-p);
     max-width: 50%;
     /* … */
+}
+
+article:nth-child(odd) {
+    flex-direction: row-reverse;
 }
 
 a:link.logo, a:visited.logo {
