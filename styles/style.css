@@ -40,6 +40,7 @@
     
     /* Utility */
     --border-radius:            10px;
+    --horizontal-line-h:        1px;
     /* … */
 
     /* Page */
@@ -266,9 +267,8 @@ input[type=reset]:active {
     border-radius: var(--border-radius);
     box-shadow: 0 10px 20px var(--clr-box-shadow), 0 6px 6px var(--clr-box-shadow);
     box-sizing: border-box;
-    height: 200px;
     object-fit: cover;
-    width: 200px;
+    height: 200px;
     /* … */
 }
 
@@ -376,6 +376,14 @@ input[type=reset]:active {
     /* … */
 }
 
+.hl {
+    background-color: var(--clr-dark-neutral);
+    border-radius: calc(3 * var(--fs-base));
+    box-sizing: border-box;
+    height: var(--horizontal-line-h);
+    width: calc(100% - 2 * var(--bm-section-p));
+}
+
 /* || SITE-WIDE */
 
 .logo {
@@ -387,7 +395,7 @@ input[type=reset]:active {
 }
 
 .logo > * {
-    margin-left:var(--bm-section-p);
+    margin-left: var(--bm-section-p);
     /* … */
 }
 
@@ -396,7 +404,7 @@ input[type=reset]:active {
     /* … */
 }
 
-.logo-wordmark {
+.logo-word-mark {
    white-space: nowrap;
     /* … */
 }
