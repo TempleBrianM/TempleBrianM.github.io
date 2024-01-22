@@ -519,9 +519,10 @@ nav.top-nav a:active {
         width: 50%;
     }
     .project-preview {
-        box-sizing: border-box;
+        background-color: var(--clr-dark-neutral-ltr);
+        height: auto;
         margin: calc(var(--bm-article-m) / 2) var(--bm-section-p) 0;
-        height: 40vh;
-        max-width: 100%;
+        max-height: 50vh;
+        width: calc(100% - 2 * var(--bm-section-p));
     }
 }
