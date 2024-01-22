@@ -2,7 +2,7 @@
     color-scheme: light;
 
     /* Colors */
-    --clr-neutral:              hsl(205, 10%, 95%);
+    --clr-neutral:              hsl(205, 10%, 90%);
 
     --clr-dark-neutral:         hsl(205, 10%, 10%);
     --clr-dark-neutral-lt:      hsl(205, 10%, 20%);
@@ -10,7 +10,7 @@
 
     --clr-primary:              hsl(205, 10%, 100%);
     --clr-primary-dk:           hsl(205, 10%, 95%);
-    --clr-primary-dk-crt:       hsl(200, 10%, 95%);
+    --clr-primary-dk-crt:       hsl(200, 10%, 90%);
 
     --clr-secondary:            hsl(205, 10%, 100%);
     --clr-secondary-tl:         hsla(205, 10%, 100%, 0.8);
@@ -214,7 +214,7 @@ input[type=email],
 select,
 textarea {
     font-size: var(--fs-input);
-    background: var(--clr-primary-dk);
+    background: var(--clr-primary);
     border: 1px solid var(--clr-dark-neutral);
     border-radius: var(--border-radius);
     box-sizing: border-box;
